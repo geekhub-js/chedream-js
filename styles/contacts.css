@@ -1,0 +1,164 @@
+/*--------------------------------------------------------------------*/
+/*---------------------------Contact Page------------------------------*/
+/*--------------------------------------------------------------------*/
+/*global*/
+.feedback{
+    float: left;
+    width: 450px;
+    margin: 0 0 30px 0;
+}
+.write-to-us{
+    float: left;
+    width: 450px;
+    margin: 0 0 30px 0;
+}
+/*feedback*/
+.contacts-page-title{
+    height: 77px;
+    padding: 25px 0 0 0;
+    border-bottom: 1px solid #E1E1E1;
+    font: 30px 'DaxPro-Bold';
+    line-height: 1;
+}
+.feedback dl{
+    margin: 0 17px 0 0;
+}
+.feedback dt{
+    position: relative;
+    float: left;
+    width: 225px;
+    height: 39px;
+    padding: 11px 27px 0 0;
+    border-bottom: 1px solid #E1E1E1;
+    text-align: right;
+    font-size: 14px;
+}
+.feedback dl dt.address{
+    height: 67px;
+    padding: 9.5px 26px 0 0;
+    border-bottom: none;
+    line-height: 1.6;
+    background: url(../images/contacts-position.png) 210px center no-repeat;
+}
+.feedback span{
+    position: absolute;
+    top: 11px;
+    right: 0;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0px 0px 0 8px;
+    width: 18px;
+    height: 20px;
+    background: url(../images/spritebox-contacts-feedback.png) no-repeat;
+}
+.feedback .city-com span{
+    background-position: 2px 1px;
+}
+.feedback .life-com span{
+    background-position: -25px 2px;
+}
+.feedback .mts-com span{
+    background-position: -52px 2px;
+}
+.feedback .kievstar-com span{
+    background-position: -80px 0px;
+}
+.feedback .skype span{
+    background-position: -106px 0px;
+}
+.feedback .icq-link span{
+    background-position: -128px 0px;
+}
+.feedback dd{
+    overflow: hidden;
+    padding: 9px 0 0 10px;
+    height: 39px;
+    border-bottom: 1px solid #E1E1E1;
+}
+.feedback dl dd:last-child{
+    height: 67px;
+    font:14px 'DaxPro-Bold';
+    border-bottom: none;
+    line-height: 1.6;
+}
+.feedback .geolocation{
+    width: 433px;
+    height: 292px;
+}
+/*write-to-us*/
+.write-to-us-title{
+    height: 77px;
+    padding: 26px 0 0 15px;;
+    border-bottom: 1px solid #E1E1E1;
+    font-size: 24px;
+}
+.write-to-us-form{
+    margin: 0 0 0 15px;
+}
+.write-to-us-form label{
+    display: block;
+    margin: 17px 0 7px 0;
+    font: 14px 'DaxPro-Bold';
+    text-transform: uppercase;
+    color: #F2602C;
+    line-height: 1;
+}
+.write-to-us-form input{
+    padding: 0 0 0 8px;
+}
+.write-to-us-form .email input,
+.write-to-us-form .mail-subject input{
+    width: 100%;
+    height: 33px;
+    border: 1px solid #E1E1E1;
+}
+.write-to-us-form .text-subject textarea{
+    width: 100%;
+    height: 251px;
+    resize: none;
+    overflow-y: auto;
+    border: 1px solid #E1E1E1;
+}
+.write-to-us-form .captcha{
+    margin: 0 0 34px 0;
+}
+.write-to-us-form .captcha input{
+    float: left;
+    width: 168px;
+    height: 32px;
+    border: 1px solid #E1E1E1;
+}
+.write-to-us-form .captcha img{
+    overflow: hidden;
+    margin: 0 0 0 10px;
+}
+.write-to-us-form .enter-form input{
+    font: 20px 'DaxPro-Bold';
+    color: #fff;
+    line-height: 1;
+    border: none;
+    padding: 18px 93px 14px 93px;
+    background: rgb(255,156,56);
+    background: -webkit-linear-gradient(rgba(255,156,56,1) 0%, rgba(237,67,29,1) 100%);
+    background: -o-linear-gradient(rgba(255,156,56,1) 0%, rgba(237,67,29,1) 100%);
+    background: linear-gradient(rgba(255,156,56,1) 0%, rgba(237,67,29,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9c38', endColorstr='#ed431d',GradientType=0 );
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.3);
+}
+.write-to-us-form .enter-form input:hover{
+    background: rgb(255,143,31);
+    background: -moz-linear-gradient(top,  rgba(255,143,31,1) 0%, rgba(226,49,9,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,143,31,1)), color-stop(100%,rgba(226,49,9,1)));
+    background: -webkit-linear-gradient(top,  rgba(255,143,31,1) 0%,rgba(226,49,9,1) 100%);
+    background: -o-linear-gradient(top,  rgba(255,143,31,1) 0%,rgba(226,49,9,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,143,31,1) 0%,rgba(226,49,9,1) 100%);
+    background: linear-gradient(to bottom,  rgba(255,143,31,1) 0%,rgba(226,49,9,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8f1f', endColorstr='#e23109',GradientType=0 );
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.6);
+}
+.write-to-us-form input:focus,
+.write-to-us-form textarea:focus{
+    outline: none;
+    border: 1px solid #FA902C;
+;    
+}
