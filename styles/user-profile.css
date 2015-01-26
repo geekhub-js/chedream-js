@@ -64,58 +64,6 @@
 .prof-soc .vkontakte a:hover{
     background-position: -192px bottom;
 }
-.prof-aside h4{
-    margin: 0 0 7px 0;
-    padding: 0 0 6px 0;
-    border-bottom: 1px solid #E1E1E1;
-    font: 14px 'DaxPro-Bold';
-    text-transform: uppercase;
-    color: #ed431d;
-}
-.prof-user-mess{
-    0 0 27px 0;
-}
-.prof-user-mess li{
-    position: relative;
-    margin: 0 0 9px 0;
-    padding: 0 30px 12px 30px;
-    border-bottom: 1px dotted #E1E1E1;
-}
-.prof-user-mess li:last-child{
-    border-bottom: none;
-}
-.prof-user-mess time{
-    font-size: 11px;
-}
-.prof-user-mess h5{
-    font: 14px 'DaxPro-Bold';
-    margin: 0 0 1px 0;
-}
-.prof-user-mess p{
-    font-size: 14px;
-    line-height: 1.2;
-}
-.prof-user-mess li.warning{
-    background: url(../images/profile-warning-message.png) left center no-repeat;
-}
-.prof-user-mess li.mark-message{
-    background: url(../images/prof-mark-message.png) 4px center no-repeat;
-}
-.prof-user-mess .close-message{
-    position: absolute;
-    overflow: hidden;
-    top: 45%;
-    right: 0;
-    display: block;
-    width: 7px;
-    height: 7px;
-    background: url(../images/close-button-bg.png) no-repeat;
-    text-indent: -999px;
-    display: none;
-}
-.prof-user-mess li:hover > .close-message{
-    display: block;
-}
 /*===============================*/
 .prof-content .prof-dream-img{
     float: left;
@@ -128,6 +76,12 @@
 .prof-content .prof-dream-name a{
     font: 18px 'DaxPro-Bold';
     line-height: 1;    
+}
+.prof-content .prof-dream-name .delete-dream{
+    display: none;
+}
+.prof-content .prof-dream-name:hover > .delete-dream{
+    display: inline-block;
 }
 .prof-content .prof-dream-about{
     overflow: hidden;
@@ -187,7 +141,6 @@
     margin: 0 0 10px 15px;
 }
 .prof-content .user-projects-nav li.active a{
-    font: 14px 'DaxPro-Bold';
     color: #ed431d;
     cursor: default;
 }
