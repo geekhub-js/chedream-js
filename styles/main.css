@@ -60,16 +60,16 @@ textarea {
   box-sizing: border-box;
 }
 select, input, textarea {
-    vertical-align:middle; 
+    vertical-align:middle;
     border: 1px solid #E1E1E1;
 
 }
-input[type="button"] { 
+input[type="button"] {
     cursor: pointer;
     background: none;
 }
-input[type="submit"] { 
-    cursor: pointer; 
+input[type="submit"] {
+    cursor: pointer;
      background: none;
 }
 input:focus,
@@ -96,28 +96,21 @@ textarea:focus {
 }
 @font-face {
   font-family: 'icons';
-  src: url('../fonts/icons.eot?7116702');
-  src: url('../fonts/icons.eot?7116702#iefix') format('embedded-opentype'),
-       url('../fonts/icons.woff?7116702') format('woff'),
-       url('../fonts/icons.ttf?7116702') format('truetype'),
-       url('../fonts/icons.svg?7116702#icons') format('svg');
+  src: url('../fonts/icons.eot?96667888');
+  src: url('../fonts/icons.eot?96667888#iefix') format('embedded-opentype'),
+       url('../fonts/icons.woff?96667888') format('woff'),
+       url('../fonts/icons.ttf?96667888') format('truetype'),
+       url('../fonts/icons.svg?96667888#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 
 .ico-tw:before { content: '\e800'; }
-.ico-vk:before { content: '\e80c'; }
-.ico-tw-1:before { content: '\e802'; }
+.ico-vk:before { content: '\e801'; }
+.ico-fb:before { content: '\e810'; }
 .ico-gplus:before { content: '\e803'; }
-.ico-fb:before { content: '\e80f'; }
-.ico-linkedin:before { content: '\e805'; }
-.ico-git:before { content: '\e806'; }
-.ico-github:before { content: '\e807'; }
-.ico-facebook:before { content: '\e808'; }
-.ico-ok:before { content: '\e809'; }
-.ico-insta:before { content: '\e80a'; }
-.ico-twitter-bird:before { content: '\e80b'; }
+.ico-cancel:before { content: '\e837'; }
 /*-------------------------------------GLOBAL--------------------------------------*/
 body {
     font-family: 'DaxPro', sans-serif;
@@ -162,8 +155,8 @@ a:hover {
 }
 /*-------------------------------------HEADER---------------------------------------*/
 header {
+    position: relative;
     height: 75px;
-    text-align: center;
 }
 header .social-title {
     float: right;
@@ -177,15 +170,17 @@ header .logo {
     overflow: hidden;
 }
 header .add-dream {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 371px;
     height: 75px;
-    display: inline-block;
-    padding: 28px 50px 0 0;
-    background: url(../images/ico_add.png) no-repeat right 40%;
+    display: block;
+    padding: 30px 50px 0 0;
+    background: url(../images/ico_add.png) no-repeat right 17px;
     font-weight: bold;
 }
 header .add-dream:hover {
-    background: url(../images/ico_add_hov.png) no-repeat right 40%;
+    background: url(../images/ico_add_hov.png) no-repeat right 17px;
     color: #464646;
 }
 header .add-dream:before {
@@ -199,7 +194,6 @@ header .add-dream:before {
     margin-left: -130px;
     background: url(../images/bg_add_dream.png) no-repeat;
 }
-
 .social {
     float: right;
     overflow: hidden;
@@ -212,15 +206,13 @@ header .add-dream:before {
     height: 75px;
 }
 .social li span {
-    padding-top: 26px;
+    padding-top: 25px;
     color: #464646;
     height: 100%;
+    width: 40px;
 }
 .social li span:hover {
     color: #fff;
-}
-.social .ico-fb {
-    width: 31px;
 }
 .social .ico-fb:hover {
     background-color: #2d4c96;
@@ -229,9 +221,6 @@ header .add-dream:before {
     background: none;
     color: #024c9c;
 }
-.social .ico-vk {
-    width: 40px;
-}
 .social .ico-vk:hover {
     background-color: #476a91;
 }
@@ -239,18 +228,12 @@ header .add-dream:before {
     background: none;
     color: #2b6c96;
 }
-.social .ico-ok {
-    width: 30px;
+.social .ico-gplus:hover {
+    background-color: #c43c2b;
 }
-.social .ico-ok:hover {
-    background-color: #f68a21;
-}
-.social .ico-ok:active {
+.social .ico-gplus:active {
     background: none;
-    color: #ff850d;
-}
-.social .ico-tw {
-    width: 40px;
+    color: #c43c2b;
 }
 .social .ico-tw:hover {
     background-color: #28aae1;
@@ -279,32 +262,38 @@ header .add-dream:before {
 .account-bar,
 .show-dreams .user-dreams-list,
 .search-active .search-link,
+.show-dreams .close-block,
+.show-dreams .no-user-dreams,
+.show-dreams .empty-list .dream-item,
 .search-active .social-title {
     display: none;
 }
-.dreams-active .user-dreams-list,
+.user-dreams-active .user-dreams-list,
 .search-active form,
+.show-dreams .empty-list .close-block,
+.show-dreams .empty-list .no-user-dreams,
 .search-active .search-field,
 .search-active input[type="submit"] {
     display: block;
 }
 .search-active .search {
-    margin-left: 15px;
+    margin-left: 13px;
 }
 .search-active .search-field {
-    width: 245px;
+    width: 230px;
     height: 75px;
     padding: 0 35px 0 20px;
 	border: 0;
     background-color: #333;
     color: #fff;
+    font-size: 14px;
 }
 .search-active input[type="submit"] {
     position: absolute;
     right: 0;
     top: 0;
     height: 100%;
-    width: 40px;
+    width: 35px;
 	border: 0;
     background: url(../images/ico_search_act.png) no-repeat center;
 }
@@ -320,13 +309,23 @@ header .account-bar > li > a {
     height: 75px;
     text-indent: -3000px;
 }
-header .account-bar .user {
+header .account-bar .user-photo {
+    padding: 17px 5px 0 0;
+    width: auto;
+    text-indent: 0;
+}
+header .account-bar .user-photo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+header .account-bar .profile {
     background: url(../images/ico_userbar.png) no-repeat 10px 47%;
 }
-header .account-bar .user:hover {
+header .account-bar .profile:hover {
     background: #25d9ff url(../images/ico_userbar.png) no-repeat -152px 47%;
 }
-header .account-bar .user:active {
+header .account-bar .profile:active {
     background: url(../images/ico_userbar.png) no-repeat -314px 47%;
 }
 header .account-bar .user-msg {
@@ -345,7 +344,7 @@ header .account-bar .user-dreams:hover {
     background: #fcb040 url(../images/ico_userbar.png) no-repeat -242px 47%;
 }
 header .account-bar .user-dreams:active,
-header.dreams-active .user-dreams {
+header.user-dreams-active .user-dreams {
     background: url(../images/ico_userbar.png) no-repeat -404px 47%;
 }
 header .account-bar .logout {
@@ -381,7 +380,10 @@ header .account-bar .logout:hover {
     border-top: 1px solid #e7e7e7;
     text-align: left;
 }
-.show-dreams .user-dreams-list li a {
+.show-dreams .empty-list li {
+    border: 0;
+}
+.show-dreams .user-dreams-list .dream-item a {
     display: block;
     height: 50px;
     padding: 15px 0 0 15px;
@@ -389,6 +391,23 @@ header .account-bar .logout:hover {
 }
 .show-dreams .user-dreams-list li:first-child {
     border-top: 0;
+}
+.show-dreams .empty-list .close-block {
+    padding: 7px;
+}
+.show-dreams .empty-list .close span {
+    float: right;
+    color: #9b9b9b;
+    opacity: .5;
+    font-size: 12px;
+}
+.show-dreams .empty-list .no-user-dreams {
+    padding: 57px 0 15px 30px;
+    height: 140px;
+}
+.show-dreams .empty-list .no-user-dreams p {
+    color: #9b9b9b;
+    font-size: 14px;
 }
 
 /*-------------------------------------NAV------------------------------------------*/
@@ -523,10 +542,6 @@ ul.main-menu li:last-child {
     text-align: center;
     font-weight: bold;
 }
-.dreams-preview a.btn-support.checked {
-    border-top: 1px solid #f2602c;
-    background: url(../images/ico_check.png) no-repeat center;
-}
 .dreams-preview a.btn-support:after {
     position: absolute;
     top: 50%;
@@ -561,9 +576,10 @@ ul.main-menu li:last-child {
     margin-right: 0;
 }
 footer {
+    overflow: hidden;
     font-size: 14px;
     margin-top: 30px;
-    padding-bottom: 30px;
+    padding: 5px 0 40px 0;
 }
 .copy {
     background: url(../images/ico_chedream.png) no-repeat;
@@ -585,12 +601,6 @@ footer .social li a {
 footer .social li span {
     padding-top: 10px;
 }
-footer .social .ico-fb,
-footer .social .ico-ok,{
-    width: 40px;
-    height: 40px;
-}
-
 .developers li {
     margin-bottom: 10px;
 }
