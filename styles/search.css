@@ -1,6 +1,9 @@
 /*--------------------------------------------------------------------*/
 /*---------------------------Search Page------------------------------*/
 /*--------------------------------------------------------------------*/
+.search-content{
+    min-height: 300px;
+}
 .search-page-title{
     float: left;
     margin: 27px 0 0 0;
@@ -102,25 +105,23 @@
 }
 /*pages nav*/
 .more-dreams{
-    margin: 0 0 10px 0;
+    overflow: hidden;
+    width: 120px;
+    margin: 0 auto 30px;
     text-align: center;
 }
 .more-dreams a{
+    display: block;
     font-size: 16px;
 }
-.list-dreams{
-    overflow: hidden;
-    margin: 0 0 30px 0;
-    text-align: center;
-}
-.list-dreams span{
+.more-dreams span{
     display: inline-block;
     width: 7px;
     height: 7px;
+    margin:  8px 2px 0;
     border-radius: 50%;
     background: #5A5A5A;
-    cursor: pointer;
 }
-.list-dreams span:hover{
+.more-dreams a:hover > span{
     background: #F2602C;
 }
