@@ -61,30 +61,55 @@
         <form action="" method="post">
             <fieldset class="media">
                 <legend>Додати</legend>
-                <ul>
-                    <li class="main-image">
-                        <label for="main-image">Зображення<span>*</span></label>
-                        <input id="main-image" type="file" name="main-image" />
-                    </li>
+                <div class="main-image">
+                    <div class="logo-container">
+                        <img src="images/add-logo.jpg" alt="" />
+                        <span class="close"></span>
+                    </div>
+                    <label for="main-image">Зображення<span>*</span></label>
+                    <input id="main-image" type="file" name="main-image" />
+                </div> 
+                <ul class="uploaded-images">
+                    <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
+                    <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
+                    <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
+                    <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
+                    <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
+                </ul>
+                <ul class="uploaded-videos">
+                    <li><iframe width="135" height="94" src="//www.youtube.com/embed/b0lyjl27jFE" frameborder="0" allowfullscreen></iframe><span class="close"></span></li>
+                    <li><iframe width="135" height="94" src="//www.youtube.com/embed/b0lyjl27jFE" frameborder="0" allowfullscreen></iframe><span class="close"></span></li>
+                    <li><iframe width="135" height="94" src="//www.youtube.com/embed/b0lyjl27jFE" frameborder="0" allowfullscreen></iframe><span class="close"></span></li>
+                </ul>
+                <ul class="uploaded-docs">
+                    
+                </ul>
+                <div class="add-url">
+                            <label for="video">Youtube Url</label> 
+                            <input type="url" name="video" id="video" />
+                            <input class="f-left green-button" type="button" value="Додати" />
+                            <input class="f-right red-button" type="button" value="Відміна" />
+                </div>   
+                <ul class="cont-addmedia">
                     <li class="addmedia image">
                         <label for="image"></label>
                         <input type="file" id="image" name="image" multiple />
                     </li>
                     <li class="addmedia video">
-                        <label for="video"></label>
-                        <input type="file" name="video" id="video" multiple />
+                                                    
                     </li>
                     <li class="addmedia document">
                         <label for="document"></label>
+                        <span class="type-doc">.pdf, .doc(x), .xls(x) </span>
                         <input type="file" name="document" id="document" multiple />
                     </li>
                 </ul>                
             </fieldset>
             <fieldset class="discription">
                 <ul>
-                    <li><label for="dream-title">Назва<span>*</span></label><input type="text" id="dream-title" name="dream-title" required /></li>
+                    <li><label for="dream-title">Назва<span>*</span></label><input class="dream-title" type="text" id="dream-title" name="dream-title" required /></li>
                     <li><label for="discription">Опис<span>*</span></label><textarea id="discription" name="discription" rows="" cols="" required></textarea></li>
-                    <li><label class="f-left" for="key-words">Ключові слова</label><small>Відокремлювати комою</small><input type="text" name="key-words" id="key-words" /></li>
+                    <li><label class="f-left" for="key-words">Ключові слова</label><small>Відокремлювати комою</small><input class="key-words" type="text" name="key-words" id="key-words" /></li>
                     <li><label  class="f-left" for="phone">Телефон<span>*</span></label>
                     <ul class="phone-access">
                         <li><input type="radio" id="all" name="phone-access" checked /><label for="all">Усім</label></li>
@@ -101,7 +126,7 @@
                             <legend class="finance">Фінансові витрати</legend>
                             <ul>
                                 <li class="f-left left-col w-item"><label for="item-of-costs">Стаття витрати</label><input type="text" name="item-of-costs" id="item-of-costs" /></li>
-                                <li class="right-col w-amount"><label for="amount-of-costs">Сума, грн</label><input type="numder" name="amount-of-costs" id="amount-of-costs" /></li>
+                                <li class="right-col w-amount"><label for="amount-of-costs">Сума, грн</label><input type="text" name="amount-of-costs" id="amount-of-costs" /></li>
                                 <li class="clear plus" id="add-article"><input type="button" /></li>
                             </ul>
                         </fieldset>
@@ -111,8 +136,8 @@
                             <legend class="tools">Інструменти / обладнання техніка</legend>
                             <ul>
                                 <li class="f-left left-col w-title"><label for="tool-title">Назва</label><input type="text" name="tool-title" id="tool-title" /></li>
-                                <li class="f-right w-number"><label for="tool-number">Кільк.</label><input type="number" name="tool-number" id="tool-number" /></li>
-                                <li class="right-col w-unit"><label for="tool-unit">Одиниця виміру</label><input type="number" name="tool-unit" id="tool-unit" /></li>                                
+                                <li class="f-right w-number"><label for="tool-number">Кільк.</label><input type="text" name="tool-number" id="tool-number" /></li>
+                                <li class="right-col w-unit"><label for="tool-unit">Одиниця виміру</label><input type="text" name="tool-unit" id="tool-unit" /></li>                                
                                 <li class="clear plus" id="add-article"><input type="button" /></li>
                             </ul>
                         </fieldset>
@@ -122,8 +147,8 @@
                             <legend class="works">Роботи та ресурси</legend>
                             <ul>
                                 <li class="f-left left-col w-title"><label for="work-title">Назва робіт</label><input type="text" name="work-title" id="work-title" /></li>
-                                <li class="f-right w-number"><label for="days">Днів</label><input type="number" name="days" id="days" /></li>
-                                <li class="right-col w-unit"><label for="people">Чоловік</label><input type="number" name="people" id="people" /></li>
+                                <li class="f-right w-number"><label for="days">Днів</label><input type="text" name="days" id="days" /></li>
+                                <li class="right-col w-unit"><label for="people">Чоловік</label><input type="text" name="people" id="people" /></li>
                                 <li class="clear plus" id="add-article"><input type="button" /></li>
                             </ul>
                         </fieldset>
@@ -131,7 +156,7 @@
                 </ul>
             </fieldset>
             <fieldset class="submit">
-                <input type="submit" value="Створити" name="submit-form" />
+                <input class="green-button" type="submit" value="Створити" name="submit-form" />
             </fieldset>
         </form>
   	</section>
