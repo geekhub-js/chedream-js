@@ -472,6 +472,7 @@ ul.main-menu li:last-child {
 .carosel-nav li:hover, .carosel-nav .active {
     background: -webkit-linear-gradient(left,  #f1592a 0%,#fcb040 100%);
     background: -ms-linear-gradient(left,  #f1592a 0%,#fcb040 100%);
+    background: -moz-linear-gradient(left, #f1592a 0%, #fcb040 100%);
 }
 .carosel-nav li:nth-child(odd):hover, .carosel-nav li:nth-child(odd).active {
     position: relative;
