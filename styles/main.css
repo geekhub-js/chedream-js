@@ -70,7 +70,7 @@ input[type="button"] {
 }
 input[type="submit"] {
     cursor: pointer;
-     background: none;
+    background: none;
 }
 input:focus,
 textarea:focus {
@@ -104,7 +104,6 @@ textarea:focus {
   font-weight: normal;
   font-style: normal;
 }
-
 
 .ico-tw:before { content: '\e800'; }
 .ico-vk:before { content: '\e801'; }
@@ -160,7 +159,7 @@ header {
 }
 header .social-title {
     float: right;
-    margin: 28px 10px 0 0;
+    margin: 29px 10px 0 0;
 }
 header .logo {
     float: left;
@@ -175,7 +174,7 @@ header .add-dream {
     left: 371px;
     height: 75px;
     display: block;
-    padding: 30px 50px 0 0;
+    padding: 29px 50px 0 0;
     background: url(../images/ico_add.png) no-repeat right 17px;
     font-weight: bold;
 }
@@ -246,12 +245,12 @@ header .add-dream:before {
     position: relative;
     float: right;
     height: 75px;
-    margin-left: 60px;
+    margin-left: 65px;
 }
 .search .search-link {
     display: block;
     height: 75px;
-    padding: 28px 35px 0 15px;
+    padding: 29px 35px 0 15px;
     background: url(../images/ico_search.png) no-repeat right 10px top 28px;
     color: #9b9b9b;
 }
@@ -297,63 +296,62 @@ header .add-dream:before {
 	border: 0;
     background: url(../images/ico_search_act.png) no-repeat center;
 }
-header .account-bar {
+.account-bar {
     float: right;
 }
-header .account-bar > li {
+.account-bar > li {
     float: left;
 }
-header .account-bar > li > a {
+.account-bar > li > a {
     display: block;
     width: 40px;
     height: 75px;
     text-indent: -3000px;
 }
-header .account-bar .user-photo {
+.account-bar .user-photo {
     padding: 17px 5px 0 0;
     width: auto;
     text-indent: 0;
 }
-header .account-bar .user-photo img {
+.account-bar .user-photo img {
     width: 40px;
     height: 40px;
     border-radius: 100%;
 }
-header .account-bar .profile {
+.account-bar .profile {
     background: url(../images/ico_userbar.png) no-repeat 10px 47%;
 }
-header .account-bar .profile:hover {
+.account-bar .profile:hover {
     background: #25d9ff url(../images/ico_userbar.png) no-repeat -152px 47%;
 }
-header .account-bar .profile:active {
+.account-bar .profile:active {
     background: url(../images/ico_userbar.png) no-repeat -314px 47%;
 }
-header .account-bar .user-msg {
+.account-bar .user-msg {
     background: url(../images/ico_userbar.png) no-repeat -34px 47%;
 }
-header .account-bar .user-msg:hover {
+.account-bar .user-msg:hover {
     background: #22e47d url(../images/ico_userbar.png) no-repeat -196px 47%;
 }
-header .account-bar .user-msg:active {
+.account-bar .user-msg:active {
     background: url(../images/ico_userbar.png) no-repeat -358px 47%;
 }
-header .account-bar .user-dreams {
+.account-bar .user-dreams {
     background: url(../images/ico_userbar.png) no-repeat -80px 47%;
 }
-header .account-bar .user-dreams:hover {
+.account-bar .user-dreams:hover {
     background: #fcb040 url(../images/ico_userbar.png) no-repeat -242px 47%;
 }
-header .account-bar .user-dreams:active,
-header.user-dreams-active .user-dreams {
+.account-bar .user-dreams:active,
+.user-dreams-active .user-dreams {
     background: url(../images/ico_userbar.png) no-repeat -404px 47%;
 }
-header .account-bar .logout {
+.account-bar .logout {
     background: url(../images/ico_userbar.png) no-repeat -120px 47%;
 }
-header .account-bar .logout:hover {
+.account-bar .logout:hover {
     background: #464646 url(../images/ico_userbar.png) no-repeat -282px 47%;
 }
-
 .show-dreams {
     position: relative;
 }
@@ -423,8 +421,104 @@ ul.main-menu li:last-child {
     margin-right: 0;
 }
 
-
 /*-------------------------------------CONTENT--------------------------------------*/
+.carosel {
+    position: relative;
+    width: 959px;
+    height: 320px;
+    margin-bottom: 23px;
+}
+.carosel:after {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    right: 60px;
+    bottom: 7px;
+    z-index: -1;
+    content: "";
+    -webkit-box-shadow:  0 0 20px rgba(0,0,0,1);
+    box-shadow: 0 0 20px rgba(0,0,0,1);
+    border-radius: 100px / 10px;
+}
+
+.carosel-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    height: inherit;
+    width: inherit;
+}
+.carosel-nav li {
+    overflow: hidden;
+    height: 159px;
+    width: 230px;
+    padding: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    border-bottom: 1px solid #e9e9e9;
+}
+.carosel-nav li:nth-child(odd) {
+    float: left;
+    clear: left;
+}
+.carosel-nav li:nth-child(even) {
+    float: right;
+    clear: right;
+}
+.carosel-nav li:nth-last-child(-n+2) {
+    border-bottom: 0;
+}
+.carosel-nav li:hover, .carosel-nav .active {
+    background: -webkit-linear-gradient(left,  #f1592a 0%,#fcb040 100%);
+    background: -ms-linear-gradient(left,  #f1592a 0%,#fcb040 100%);
+}
+.carosel-nav li:nth-child(odd):hover, .carosel-nav li:nth-child(odd).active {
+    position: relative;
+    padding-left: 32px;
+    width: 242px;
+    left:-12px;
+}
+.carosel-nav li:nth-child(even):hover, .carosel-nav li:nth-child(even).active {
+    position: relative;
+    width: 242px;
+    right: -12px;
+}
+.carosel-nav li:hover a, .carosel-nav .active a {
+    color: #fff;
+}
+.carosel-nav a {
+    font-size: 23px;
+    font-weight: bold;
+}
+.carosel-inner {
+    position: relative;
+    width: 499px;
+    height: 318px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.carosel-inner ul {
+    position: relative;
+    width: 2000em;
+}
+.carosel-inner li {
+    float: left;
+    position: relative;
+}
+.carosel-inner .dream-info {
+    display: none;
+}
+.carosel-inner .active .dream-info {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    display: block;
+    padding: 17px 20px 22px;
+    font-size: 14px;
+    color: #fff;
+    background: rgba(0,0,0,.25);
+}
 .dreams-preview:after {
     content: "";
     clear: both;
@@ -435,7 +529,7 @@ ul.main-menu li:last-child {
     background-color: #fff;
     float: left;
     max-width: 230px;
-    margin: 23px 13px 0 0;
+    margin: 0 13px 23px 0;
 }
 .dreams-preview li:nth-child(4n) {
     margin-right: 0;
@@ -462,7 +556,6 @@ ul.main-menu li:last-child {
 .dreams-preview .favorite-checked:hover {
     background: #fff url(../images/ico_star_fav.png) no-repeat -125px 0;
 }
-
 .dreams-preview h3 {
     padding: 20px 30px 20px 20px;
     margin-bottom: 20px;
@@ -550,7 +643,7 @@ ul.main-menu li:last-child {
     right: 30px;
     z-index: -1;
     content: "";
-    -webkit-box-shadow:  0 15px rgba(0,0,0,0.8);
+    -webkit-box-shadow:  0 -5px 20px rgba(0,0,0,0.8);
     box-shadow: 0 -5px 20px rgba(0,0,0,0.8);
     border-radius: 100px / 10px;
 }
@@ -578,7 +671,7 @@ ul.main-menu li:last-child {
 footer {
     overflow: hidden;
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 10px;
     padding: 5px 0 40px 0;
 }
 .copy {
