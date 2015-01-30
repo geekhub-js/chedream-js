@@ -20,9 +20,7 @@ textarea:focus {
 .bg-pages form {
     padding: 25px 0;
 }
-.bg-pages {
-    width: 960px;
-}
+
 
 
 /*media*/ /*media*/ /*media*/ /*media*/ /*media*/ 
@@ -444,8 +442,11 @@ select {
     margin: -4px 0 0 3px;
     padding: 9px 0;
 }
-
-
+.new-dream-shadow{
+    margin: 0;
+    padding: 35px 0 0 0;
+    background: url(../images/section-shadow-green.png)center top no-repeat;    
+}
 
 
 
