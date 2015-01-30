@@ -1,5 +1,5 @@
 angular.module('Che-app', [
-    'todo.routing',
+    'che.routing',
     'ui.router'
 ])
     .config(function ($urlRouterProvider) {
