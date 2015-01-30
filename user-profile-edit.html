@@ -5,59 +5,67 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>Index</title>
 	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="styles/FAQ.css">
-	<link rel="stylesheet" href="styles/user-profile.css">
 	<link rel="stylesheet" href="styles/user-profile-edit.css">
 </head>
 
 <body>
 <div class="wrapper">
 	<header>
-		<p><a class="logo" href="#"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></p>
-		<nav>
-		<ul class="main-menu">
-			<li><a href="#">Мрії</a></li>
-			<li><a href="#">FAQ</a></li>
-			<li><a href="#">Контакти</a></li>
-			<li><a href="#">Підписатись</a></li>
-		</ul>
-		</nav>
-
-
-		<div class="search">
-			<form action="#" method="post">
-				<input type="submit" value="">
-				<input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
-			</form>
-			<a class="search-link" href="#">Пошук</a>
-		</div>
-		<ul class="social">
-			<li><a href="#"><span class="ico-fb"></span></a></li>
-			<li><a href="#"><span class="ico-vk"></span></a></li>
-			<li><a href="#"><span class="ico-ok"></span></a></li>
-		</ul>
-		<span class="social-title">Увійти через</span>
-		<ul class="account-bar">
-			<li>
-				<a class="user" href="#">ss</a>
-			</li>
-			<li>
-				<a class="user-msg" href="#">mmm</a>
-			</li>
-			<li class="show-dreams">
-				<a class="user-dreams" href="#">ddd</a>
-				<ul class="user-dreams-list">
-					<li><a href="#">Мрія 1</a></li>
-					<li><a href="#">Мрія 2</a></li>
-					<li><a href="#">Мрія 3</a></li>
-				</ul>
-			</li>
-			<li>
-				<a class="logout" href="#">aa</a>
-			</li>
-		</ul>
-		<a class="add-dream" href="#">Додати мрію</a>
-	</header>
+        <h1><a class="logo" href="index.html"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></h1>
+        <nav>
+        <ul class="main-menu">
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+        </nav>
+        <div class="search">
+            <form action="#" method="post">
+                <input type="submit" value="">
+                <input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
+            </form>
+            <a class="search-link" href="#">Пошук</a>
+        </div>
+        <ul class="social">
+            <li>
+                <a href="#"><span class="ico-fb"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-vk"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-gplus"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-tw"></span></a>
+            </li>
+        </ul>
+        <span class="social-title">Увійти через</span>
+        <ul class="account-bar">
+            <li>
+                <a class="user-photo" href="#"><img src="images/user-photo.jpg" alt="User photo"></a>
+            </li>
+            <li>
+                <a class="profile" href="#">profile</a>
+            </li>
+            <li>
+                <a class="user-msg" href="#">messages</a>
+            </li>
+            <li class="show-dreams">
+                <a class="user-dreams" href="#">user dreams</a>
+                <ul class="user-dreams-list empty-list">
+                    <li class="dream-item"><a href="#">Мрія 1</a></li>
+                    <li class="dream-item"><a href="#">Мрія 2</a></li>
+                    <li class="dream-item"><a href="#">Мрія 3</a></li>
+                    <li class="close-block"><a href="#" class="close"><span class="ico-cancel"></span></a></li>
+                    <li class="no-user-dreams"><p>Ви не додали жодної мрії</p></li>
+                </ul>
+            </li>
+            <li>
+                <a class="logout" href="#">logout</a>
+            </li>
+        </ul>
+        <a class="add-dream" href="#">Додати мрію</a>
+    </header>
 	
     <div class="bg-pages">
         <form method="post">
@@ -67,33 +75,25 @@
                     <li><label for="user-phone">Телефон</label><input type="tel" id="user-phone" name="user-phone" /></li>
                     <li><label for="user-skype">Скайп</label><input type="text" id="user-skype" name="user-skype" /></li>
                     <li><label for="user-email">Email</label><input type="email" id="user-email" name="user-email" /></li>
-                    <li><label for="user-facebook">Facebook</label><input type="text" id="user-facebook" name="user-facebook" /></li>
-                    <li><label for="user-vk">Vkontakte</label><input type="text" id="user-vk" name="user-vk" /></li>
-                </ul>                
+                </ul> 
+                <ul class="social">
+                    <li><a href="#"><span class="ico-fb"></span></a>
+                    </li><li><a href="#"><span class="ico-vk"></span></a>
+                    </li><li><a href="#"><span class="ico-gplus"></span></a>
+                    </li><li><a href="#"><span class="ico-tw"></span></a>
+                </li></ul>           
             </fieldset>
             <fieldset class="content-user-data">
                 <ul>
                     <li><label for="user-name">Ім'я та прізвище</label><input type="text" id="user-name" name="user-name" /></li>
-                    <li>
+                    <li class="birthday">
                         <p>Дата народження</p>
-                        <select class="birthday-day" name="birthday-day">
-                            <option class="disable-sel" value="">День</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>    
-                        <select class="birthday-month" name="birthday-month">
-                            <option class="disable-sel" value="">Місяць</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>    
-                        <select class="birthday-year" name="birthday-year">
-                            <option class="disable-sel" value="">Рік</option>
-                            <option value="">1</option>
-                            <option value="">2</option>
-                        </select>    
+                        <input class="day" type="button" value="День" />
+                        <input class="month" type="button" value="Місяць" />
+                        <input class="year" type="button" value="Рік" />  
                     </li>
-                    <li><label for="about-user">Про себе</label><textarea class="about-user" name="about-user" id="about-user"></textarea></li>
-                    <li><input type="submit" value="Зберегти" /></li>
+                    <li class="about-user"><label for="about-user">Про себе</label><textarea name="about-user" id="about-user"></textarea></li>
+                    <li><input class="green-button" type="submit" value="Зберегти" /></li>
                 </ul>                                
             </fieldset>
         </form>
@@ -106,9 +106,7 @@
             </li>
             <li>
                 <ul class="links">
-                    <li><a href="#">Мрії</a></li>
                     <li><a href="#">Регламент та поради</a></li>
-                    <li><a href="#">Підписатись на оновлення</a></li>
                     <li><a href="#">Контакти</a></li>
                 </ul>
             </li>
@@ -122,7 +120,7 @@
                         <a href="#"><span class="ico-vk"></span></a>
                     </li>
                     <li>
-                        <a href="#"><span class="ico-ok"></span></a>
+                        <a href="#"><span class="ico-gplus"></span></a>
                     </li>
                     <li>
                         <a href="#"><span class="ico-tw"></span></a>
