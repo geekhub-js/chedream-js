@@ -8,6 +8,7 @@ angular.module('Che-app', [
     'faq.routing',
     'mainPage.routing',
     'oldBrowser.routing',
+    'popUps.routing',
     'profile.routing',
     'search.routing',
     'ui.router'
