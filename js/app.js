@@ -1,9 +1,7 @@
 angular.module('Che-app', [
     'allDreams.routing',
     'contacts.routing',
-    'creatingDream.routing',
     'dream.routing',
-    'editingDream.routing',
     'error.routing',
     'faq.routing',
     'mainPage.routing',

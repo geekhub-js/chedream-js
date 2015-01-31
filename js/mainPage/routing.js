@@ -8,9 +8,10 @@ angular.module('mainPage.routing', [
                 url: '/',
                 templateUrl: 'templates/mainPage/content.html',
                 controller: 'MainPageController'
-            }).state('carousel', {
+            })/*
+            .state('carousel', {
                 url: '/',
                 templateUrl: 'templates/mainPage/carousel.html',
                 controller: 'MainPageController'
-            });
+            })*/;
     });
