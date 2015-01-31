@@ -5,9 +5,9 @@ angular.module('mainPage.routing', [
 
     .config(function ($stateProvider) {
         $stateProvider
-            .state('td', {
+            .state('content', {
                 url: '/',
-                templateUrl: 'templates/mainPage/header.html',
+                templateUrl: 'templates/mainPage/content.html',
                 controller: 'MainPageController'
             });
     });
