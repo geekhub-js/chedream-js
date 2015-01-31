@@ -12,70 +12,76 @@
 <body>
 <div class="wrapper">
 	<header>
-		<p><a class="logo" href="#"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></p>
-		<nav>
-		<ul class="main-menu">
-			<li><a href="#">Мрії</a></li>
-			<li><a href="#">FAQ</a></li>
-			<li><a href="#">Контакти</a></li>
-			<li><a href="#">Підписатись</a></li>
-		</ul>
-		</nav>
-
-
-		<div class="search">
-			<form action="#" method="post">
-				<input type="submit" value="">
-				<input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
-			</form>
-			<a class="search-link" href="#">Пошук</a>
-		</div>
-		<ul class="social">
-			<li><a href="#"><span class="ico-fb"></span></a></li>
-			<li><a href="#"><span class="ico-vk"></span></a></li>
-			<li><a href="#"><span class="ico-ok"></span></a></li>
-		</ul>
-		<span class="social-title">Увійти через</span>
-		<ul class="account-bar">
-			<li>
-				<a class="user" href="#">ss</a>
-			</li>
-			<li>
-				<a class="user-msg" href="#">mmm</a>
-			</li>
-			<li class="show-dreams">
-				<a class="user-dreams" href="#">ddd</a>
-				<ul class="user-dreams-list">
-					<li><a href="#">Мрія 1</a></li>
-					<li><a href="#">Мрія 2</a></li>
-					<li><a href="#">Мрія 3</a></li>
-				</ul>
-			</li>
-			<li>
-				<a class="logout" href="#">aa</a>
-			</li>
-		</ul>
-		<a class="add-dream" href="#">Додати мрію</a>
-	</header>
+        <h1><a class="logo" href="index.html"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></h1>
+        <nav>
+        <ul class="main-menu">
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+        </nav>
+        <div class="search">
+            <form action="#" method="post">
+                <input type="submit" value="">
+                <input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
+            </form>
+            <a class="search-link" href="#">Пошук</a>
+        </div>
+        <ul class="social">
+            <li>
+                <a href="#"><span class="ico-fb"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-vk"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-gplus"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-tw"></span></a>
+            </li>
+        </ul>
+        <span class="social-title">Увійти через</span>
+        <ul class="account-bar">
+            <li>
+                <a class="user-photo" href="#"><img src="images/user-photo.jpg" alt="User photo"></a>
+            </li>
+            <li>
+                <a class="profile" href="#">profile</a>
+            </li>
+            <li>
+                <a class="user-msg" href="#">messages</a>
+            </li>
+            <li class="show-dreams">
+                <a class="user-dreams" href="#">user dreams</a>
+                <ul class="user-dreams-list empty-list">
+                    <li class="dream-item"><a href="#">Мрія 1</a></li>
+                    <li class="dream-item"><a href="#">Мрія 2</a></li>
+                    <li class="dream-item"><a href="#">Мрія 3</a></li>
+                    <li class="close-block"><a href="#" class="close"><span class="ico-cancel"></span></a></li>
+                    <li class="no-user-dreams"><p>Ви не додали жодної мрії</p></li>
+                </ul>
+            </li>
+            <li>
+                <a class="logout" href="#">logout</a>
+            </li>
+        </ul>
+        <a class="add-dream" href="#">Додати мрію</a>
+    </header>
 	
     <div class="bg-pages prof-con">
 	    <aside class="g-aside prof-aside">
             <div class="user-avatar">
                 <img src="images/profile-avatar.jpg" alt="user-avatar">
             </div>
-            <ul class="prof-soc">
-                <li class="city-phone">
-                    <a href="#" title="phone">phone</a>
-                </li><li class="skype">
-                    <a href="#" title="skype">skype</a>
-                </li><li class="email">
-                    <a href="#" title="email">email</a>
-                </li><li class="facebook">
-                    <a href="#" title="facebook">facebook</a>
-                </li><li class="vkontakte">
-                    <a href="#" title="vkontakte">vkontakte</a>
-                </li>
-            </ul>
+            <ul class="contacts-panel">
+                <li><a href="#"><span class="ico-phone-1"></span></a>
+                </li><li><a href="#"><span class="ico-skype-1"></span></a>
+                </li><li><a href="#"><span class="ico-mail-alt"></span></a>
+                </li><li><a href="#"><span class="ico-fb"></span></a>
+                </li><li><a href="#"><span class="ico-vk"></span></a>
+                </li><li><a href="#"><span class="ico-gplus"></span></a>
+                </li><li><a href="#"><span class="ico-tw"></span></a>
+            </li></ul>
 	    </aside>
 
         <section class="prof-content">
@@ -204,9 +210,7 @@
             </li>
             <li>
                 <ul class="links">
-                    <li><a href="#">Мрії</a></li>
                     <li><a href="#">Регламент та поради</a></li>
-                    <li><a href="#">Підписатись на оновлення</a></li>
                     <li><a href="#">Контакти</a></li>
                 </ul>
             </li>
@@ -220,7 +224,7 @@
                         <a href="#"><span class="ico-vk"></span></a>
                     </li>
                     <li>
-                        <a href="#"><span class="ico-ok"></span></a>
+                        <a href="#"><span class="ico-gplus"></span></a>
                     </li>
                     <li>
                         <a href="#"><span class="ico-tw"></span></a>
