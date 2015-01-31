@@ -447,6 +447,10 @@ select {
     padding: 35px 0 0 0;
     background: url(../images/section-shadow-green.png)center top no-repeat;    
 }
-
+.edit-page-shadow{
+    margin: 0;
+    padding: 35px 0 0 0;
+    background: url(../images/section-shadow-green.png)center top no-repeat;    
+}
 
 

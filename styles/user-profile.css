@@ -18,52 +18,6 @@
 .user-avatar img{
     width: 100%;
 }
-.prof-soc{
-    overflow: hidden;
-    text-align: center;
-    margin: 0 0 26px 0;
-}
-.prof-soc li{
-    display: inline-block;
-}
-.prof-soc a{
-    overflow: hidden;
-    display: block;
-    width: 41px;
-    height: 41px;
-    background: url(../images/spritebox-profile-soc.png) no-repeat;
-    text-indent: -999px;
-}
-.prof-soc .city-phone a{
-    background-position: 0px 9px;
-}
-.prof-soc .skype a{
-    background-position: -49px 10px;
-}
-.prof-soc .email a{
-    background-position: -98px 12px;
-}
-.prof-soc .facebook a{
-    background-position: -145px 9px;
-}
-.prof-soc .vkontakte a{
-    background-position: -192px 14px;
-}
-.prof-soc .city-phone a:hover{
-    background-position: left bottom;
-}
-.prof-soc .skype a:hover{
-    background-position: -49px bottom;
-}
-.prof-soc .email a:hover{
-    background-position: -98px bottom;
-}
-.prof-soc .facebook a:hover{
-    background-position: -145px bottom;
-}
-.prof-soc .vkontakte a:hover{
-    background-position: -192px bottom;
-}
 /*===============================*/
 .prof-content .prof-dream-img{
     float: left;
@@ -103,9 +57,12 @@
     width: 124px;
     height: 29px;
     margin: 0 -30px 0 0;
-    padding: 6.5px 0 0 31px;
+    padding: 5px 0 0 31px;
     background: url(../images/profile-edit-bg.png) no-repeat;
     font: 14px 'DaxPro-Bold';
+    color: #eee;
+}
+.prof-content .user-prof-edit:hover{
     color: #fff;
 }
 .prof-content time{
@@ -214,4 +171,64 @@
     margin: 0 0 2px 11px;
     background: url(../images/close-button-bg.png)no-repeat;
     cursor: pointer;
+}
+/*soc-panel*/
+.prof-con .contacts-panel {
+    overflow: hidden;
+    text-align: center;
+}
+.prof-con .contacts-panel li {
+    display: inline-block;
+}
+.prof-con .contacts-panel li span {
+    padding: 9px 0 0 0;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: none;
+}
+.prof-con .contacts-panel li span:hover{
+    color: #fff;
+}
+.prof-con .contacts-panel .ico-phone-1 {
+    color: #464646;
+}
+.prof-con .contacts-panel .ico-skype-1 {
+    color: #30A7DF;
+}
+.prof-con .contacts-panel .ico-mail-alt {
+    color: #EEC64D;
+}
+.prof-con .contacts-panel .ico-fb {
+    color: #2C4D98;
+}
+.prof-con .contacts-panel .ico-vk {
+    color: #476C93;
+}
+.prof-con .contacts-panel .ico-gplus {
+    color: #c43c2b;
+}
+.prof-con .contacts-panel .ico-tw {
+    color: #28aae1;
+}
+.prof-con .contacts-panel .ico-phone-1:hover {
+    background-color: #464646;
+}
+.prof-con .contacts-panel .ico-skype-1:hover {
+    background-color: #30A7DF;
+}
+.prof-con .contacts-panel .ico-mail-alt:hover {
+    background-color: #EEC64D;
+}
+.prof-con .contacts-panel .ico-fb:hover {
+    background-color: #2C4D98;
+}
+.prof-con .contacts-panel .ico-vk:hover {
+    background-color: #476C93;
+}
+.prof-con .contacts-panel .ico-gplus:hover {
+    background-color: #c43c2b;
+}
+.prof-con .contacts-panel .ico-tw:hover {
+    background-color: #28aae1;
 }

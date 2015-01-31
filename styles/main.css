@@ -103,6 +103,9 @@ textarea:focus {
   font-style: normal;
 }
 
+.ico-mail-alt:before { content: '\e814'; }
+.ico-skype-1:before { content: '\e86e'; }
+.ico-phone-1:before { content: '\e883'; }
 .ico-tw:before { content: '\e800'; }
 .ico-vk:before { content: '\e801'; }
 .ico-fb:before { content: '\e810'; }
@@ -128,11 +131,7 @@ a:link, a:hover {
 a:hover {
     color: #dd3509;
 }
-.bg-pages{
-    overflow: hidden;
-    padding: 0 30px;
-    background: #fff;
-}
+
 [class^="ico-"], [class*=" ico-"] {
     font-family: "icons";
     speak: none;
@@ -187,6 +186,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6e5b', end
 }
 .bg-pages{
     overflow: hidden;
+    position: relative;
     padding: 0 30px;
     background: #fff;
 }
