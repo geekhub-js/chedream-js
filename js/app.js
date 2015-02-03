@@ -1,4 +1,4 @@
-angular.module('Che-app', [
+angular.module('chedream.app', [
     'allDreams.routing',
     'contacts.routing',
     'dream.routing',
