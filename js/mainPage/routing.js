@@ -4,14 +4,16 @@ angular.module('mainPage.routing', [
 ])
     .config(function ($stateProvider) {
         $stateProvider
-            .state('main', {
-                url: '/',
+            .state('mainPage', {
+                url: '/mainPage',
                 controller: 'MainPageController',
-                templateUrl: 'templates/mainPage/content.html'
-            })
-            .state('carousel', {
-                url: '/',
-                controller: 'MainPageController',
-                templateUrl: 'templates/mainPage/carousel.html'
+                views: {
+                    content: {
+                        templateUrl: 'templates/mainPage/content.html'
+                    },
+                    carusel: {
+                        templateUrl: 'templates/mainPage/carousel.html'
+                    }
+                }
             });
     });
