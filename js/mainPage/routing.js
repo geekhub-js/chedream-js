@@ -8,11 +8,11 @@ angular.module('mainPage.routing', [
                 url: '/mainPage',
                 controller: 'MainPageController',
                 views: {
+                    carousel: {
+                        templateUrl: 'templates/mainPage/carousel.html'
+                    },
                     content: {
                         templateUrl: 'templates/mainPage/content.html'
-                    },
-                    carusel: {
-                        templateUrl: 'templates/mainPage/carousel.html'
                     }
                 }
             });
