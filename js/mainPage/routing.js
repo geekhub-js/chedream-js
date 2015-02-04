@@ -9,9 +9,11 @@ angular.module('mainPage.routing', [
                 controller: 'MainPageController',
                 views: {
                     carousel: {
+                        url: '/carousel',
                         templateUrl: 'templates/mainPage/carousel.html'
                     },
                     content: {
+                        url: '/content',
                         templateUrl: 'templates/mainPage/content.html'
                     }
                 }
