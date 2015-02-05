@@ -140,44 +140,24 @@ a:hover {
     text-align: center;
 }
 .green-button {
-    background: rgb(97,233,161); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(97,233,161,1) 0%, rgba(73,182,192,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(97,233,161,1)), color-stop(100%,rgba(73,182,192,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(97,233,161,1) 0%,rgba(73,182,192,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(97,233,161,1) 0%,rgba(73,182,192,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(97,233,161,1) 0%,rgba(73,182,192,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(97,233,161,1) 0%,rgba(73,182,192,1) 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61e9a1', endColorstr='#49b6c0',GradientType=0 ); /* IE6-9 */
+background: -moz-linear-gradient(top,  rgba(255,110,91,1) 0%, rgba(203,22,5,1) 100%); /* FF3.6+ */
+background: -webkit-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -ms-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* IE10+ */
 }
 .green-button:hover {
-    background: rgb(65,226,159); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(65,226,159,1) 0%, rgba(45,169,179,1) 100%, rgba(45,169,179,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(65,226,159,1)), color-stop(100%,rgba(45,169,179,1)), color-stop(100%,rgba(45,169,179,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(65,226,159,1) 0%,rgba(45,169,179,1) 100%,rgba(45,169,179,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(65,226,159,1) 0%,rgba(45,169,179,1) 100%,rgba(45,169,179,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(65,226,159,1) 0%,rgba(45,169,179,1) 100%,rgba(45,169,179,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(65,226,159,1) 0%,rgba(45,169,179,1) 100%,rgba(45,169,179,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41e29f', endColorstr='#2da9b3',GradientType=0 ); /* IE6-9 */
+background: -moz-linear-gradient(top,  rgba(255,110,91,1) 0%, rgba(203,22,5,1) 100%); /* FF3.6+ */
+background: -webkit-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -ms-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* IE10+ */
 }
 .red-button {
-background: rgb(255,159,90); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(255,159,90,1) 0%, rgba(218,46,32,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,159,90,1)), color-stop(100%,rgba(218,46,32,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(255,159,90,1) 0%,rgba(218,46,32,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(255,159,90,1) 0%,rgba(218,46,32,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(255,159,90,1) 0%,rgba(218,46,32,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(255,159,90,1) 0%,rgba(218,46,32,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9f5a', endColorstr='#da2e20',GradientType=0 ); /* IE6-9 */
+background: -moz-linear-gradient(top,  rgba(255,110,91,1) 0%, rgba(203,22,5,1) 100%); /* FF3.6+ */
+background: -webkit-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -ms-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* IE10+ */
 }
 .red-button:hover {
-    background: rgb(255,110,91); /* Old browsers */
 background: -moz-linear-gradient(top,  rgba(255,110,91,1) 0%, rgba(203,22,5,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,110,91,1)), color-stop(100%,rgba(203,22,5,1))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(255,110,91,1) 0%,rgba(203,22,5,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6e5b', endColorstr='#cb1605',GradientType=0 ); /* IE6-9 */
 }
 /*-------------------------------------WRAPPER--------------------------------------*/
 .wrapper {
@@ -672,33 +652,33 @@ ul.main-menu li:last-child {
     margin: 15px;
     text-align: center;
 }
-#svg circle {
+.svg circle {
     stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s linear;
     stroke: #e0e0e0;
     stroke-width: 7px;
 }
-#svg #bar {
+.svg .bar {
     stroke: #5a5a5a;
     transform: rotate(-90deg) translateX(-60px);
 }
-#finance,
-#instruments,
-#people {
+.finance,
+.instruments,
+.people {
     position: relative;
     display: inline-block;
     height: 60px;
     width: 60px;
     border-radius: 100%;
 }
-#finance:hover #bar,
-#instruments:hover #bar,
-#people:hover #bar{
+.finance:hover .bar,
+.instruments:hover .bar,
+.people:hover .bar {
     stroke: #f2602c;
 }
-#finance:after,
-#instruments:after,
-#people:after {
+.finance:after,
+.instruments:after,
+.people:after {
     position: absolute;
     display: block;
     height: 48px;
@@ -714,18 +694,18 @@ ul.main-menu li:last-child {
     font-size: 14px;
     opacity: .7;
 }
-#finance:after {
+.finance:after {
     content: url(../images/finance.png);
 }
-#instruments:after {
+.instruments:after {
     content: url(../images/tools.png);
 }
-#people:after {
+.people:after {
     content: url(../images/works.png);
 }
-#finance:hover:after,
-#instruments:hover:after,
-#people:hover:after {
+.finance:hover:after,
+.instruments:hover:after,
+.people:hover:after {
     margin-top: -24px;
     content: attr(data-pct)"%";
     color: #444444;
