@@ -1,0 +1,51 @@
+/*--------------------------------------------------------------------*/
+/*----------------------------Old Browsers------------------------------*/
+/*--------------------------------------------------------------------*/
+.bg-pages {
+    padding: 0;
+}
+.old-brows {
+    height: 510px;
+    padding: 50px 85px 60px 50%;
+    background: url(../images/old-ie.png) no-repeat 90px 60px;
+    text-align: center;
+}
+.old-brows h2 {
+    margin-bottom: 35px;
+    color: #000;
+    font-size: 44px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.old-brows p {
+    font-size: 23px;
+}
+.old-brows .old-ie {
+    font-size: 44px;
+    color: #ff0000;
+    font-weight: bold;
+}
+.download-brows {
+    margin-top: 25px;
+}
+.download-brows li {
+    display: inline-block;
+    vertical-align: bottom;
+}
+.download-brows li a {
+    display: block;
+    height: 125px;
+    width: 105px;
+    padding: 20px 0 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.download-brows li img {
+    display: block;
+    margin: 0 auto 5px;
+}
+.download-brows li a:hover {
+    background-color: #f2f2f2;
+    color: #1b1b1b;
+}

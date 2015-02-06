@@ -662,23 +662,23 @@ ul.main-menu li:last-child {
     stroke: #5a5a5a;
     transform: rotate(-90deg) translateX(-60px);
 }
-.finance,
-.instruments,
-.people {
+.work-progress .finance,
+.work-progress .instruments,
+.work-progress .people {
     position: relative;
     display: inline-block;
     height: 60px;
     width: 60px;
     border-radius: 100%;
 }
-.finance:hover .bar,
-.instruments:hover .bar,
-.people:hover .bar {
+.work-progress .finance:hover .bar,
+.work-progress .instruments:hover .bar,
+.work-progress .people:hover .bar {
     stroke: #f2602c;
 }
-.finance:after,
-.instruments:after,
-.people:after {
+.work-progress .finance:after,
+.work-progress .instruments:after,
+.work-progress .people:after {
     position: absolute;
     display: block;
     height: 48px;
@@ -694,18 +694,18 @@ ul.main-menu li:last-child {
     font-size: 14px;
     opacity: .7;
 }
-.finance:after {
+.work-progress .finance:after {
     content: url(../images/finance.png);
 }
-.instruments:after {
+.work-progress .instruments:after {
     content: url(../images/tools.png);
 }
-.people:after {
+.work-progress .people:after {
     content: url(../images/works.png);
 }
-.finance:hover:after,
-.instruments:hover:after,
-.people:hover:after {
+.work-progress .finance:hover:after,
+.work-progress .instruments:hover:after,
+.work-progress .people:hover:after {
     margin-top: -24px;
     content: attr(data-pct)"%";
     color: #444444;
@@ -805,8 +805,9 @@ footer .social li span {
 .developers .designer:hover {
     opacity: 1;
 }
-
+/*----------------------------------------------------------------------------------*/
 /*-------------------------------------POPUPS---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
 .popup-login,
 .popup-willview,
 .popup-thanks {
