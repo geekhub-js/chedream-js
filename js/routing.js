@@ -1,11 +1,11 @@
 angular.module('routing', [
-    'addDream.controller',
-    'contacts.controller',
-    'editDream.controller',
-    'editProfile.controller',
-    'faq.controller',
     'home.controller',
-    'userProfile.controller',
+    'faq.controller',
+    'contacts.controller',
+    //'addDream.controller',
+    //'editDream.controller',
+    //'editProfile.controller',
+    //'userProfile.controller',
     'ui.router'
 ])
     .config(function ($stateProvider) {
@@ -13,16 +13,17 @@ angular.module('routing', [
             .state('home', {
                 url: '/',
                 templateUrl: 'templates/home.html',
-                controller: 'home.controller'
+                controller: 'HomeCtrl'
             })
             .state('faq', {
                 url: '/faq',
                 templateUrl: 'templates/faq.html',
-                controller: 'faq.controller'
+                controller: 'FaqCtrl'
             })
             .state('contacts', {
                 url: '/contacts',
                 templateUrl: 'templates/contacts.html',
-                controller: 'contacts.controller'
-            });
+                controller: 'ContactsCtrl'
+            })
+        ;
     });

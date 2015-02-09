@@ -1,5 +1,60 @@
 <div class="wrapper">
-<div ui-view="header"></div>
+    <header>
+        <h1><a class="logo" ui-sref="home"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></h1>
+        <nav>
+            <ul class="main-menu">
+                <li><a ui-sref="faq">FAQ</a></li>
+                <li><a ui-sref="contacts">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <form action="#" method="post">
+                <input type="submit" value="">
+                <input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
+            </form>
+            <a class="search-link" href="#">Пошук</a>
+        </div>
+        <ul class="social">
+            <li>
+                <a href="#"><span class="ico-fb"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-vk"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-gplus"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-tw"></span></a>
+            </li>
+        </ul>
+        <span class="social-title">Увійти через</span>
+        <ul class="account-bar">
+            <li>
+                <a class="user-photo" href="#"><img src="images/user-photo.jpg" alt="User photo"></a>
+            </li>
+            <li>
+                <a class="profile" href="#">profile</a>
+            </li>
+            <li>
+                <a class="user-msg" href="#">messages</a>
+            </li>
+            <li class="show-dreams">
+                <a class="user-dreams" href="#">user dreams</a>
+                <ul class="user-dreams-list empty-list">
+                    <li class="dream-item"><a href="#">Мрія 1</a></li>
+                    <li class="dream-item"><a href="#">Мрія 2</a></li>
+                    <li class="dream-item"><a href="#">Мрія 3</a></li>
+                    <li class="close-block"><a href="#" class="close"><span class="ico-cancel"></span></a></li>
+                    <li class="no-user-dreams"><p>Ви не додали жодної мрії</p></li>
+                </ul>
+            </li>
+            <li>
+                <a class="logout" href="#">logout</a>
+            </li>
+        </ul>
+        <a class="add-dream" href="#">Додати мрію</a>
+    </header>
     <div class="carosel" id="carosel">
         <ul class="carosel-nav">
             <li class="active">
@@ -416,5 +471,78 @@
             </li>
         </ul>
     </section>
-    <div ui-view="footer"></div>
+    <footer>
+        <ul class="footer-info">
+            <li>
+                <span class="copy">&copy; 2012 Черкаська мрія</span>
+            </li>
+            <li>
+                <ul class="links">
+                    <li><a href="#">Регламент та поради</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </li>
+            <li>
+                <span>Слідкуйте за нами</span>
+                <ul class="social">
+                    <li>
+                        <a href="#"><span class="ico-fb"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="ico-vk"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="ico-gplus"></span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="ico-tw"></span></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul class="developers">
+                    <li>
+                        <span class="title">Розробка:</span>
+                        <a class="dev" href="#"><img src="images/ico_gh_hov.png" alt="GeekHub"></a>
+                    </li>
+                    <li>
+                        <span class="title">Дизайн:</span>
+                        <a class="designer" href="#"><img src="images/ico_sergium_hov.png" alt="Sergium"></a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+</div>
+<div class="popup popup-login" id="popup-login">
+    <div class="popup-content">
+        <a class="close" href="#"><span class="ico-cancel"></span></a>
+        <p>Вам необхідно авторизуватись</p>
+        <ul class="social">
+            <li>
+                <a href="#"><span class="ico-fb"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-vk"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-gplus"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-tw"></span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="popup popup-willview" id="popup-willview">
+    <div class="popup-content">
+        <a class="close" href="#"><span class="ico-cancel"></span></a>
+        <p>Дякуємо, Ваша мрія буде розглянута адміністратором.</p>
+    </div>
+</div>
+<div class="popup popup-thanks" id="popup-thanks">
+    <div class="popup-content">
+        <a class="close" href="#"><span class="ico-cancel"></span></a>
+        <p>Дякуємо за вашу підтримку!</p>
+    </div>
 </div>
