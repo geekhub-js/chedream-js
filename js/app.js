@@ -1,4 +1,4 @@
-angular.module('chedream.app', [
+var chedreamApp = angular.module('chedream.app', [
     'routing',
     'ui.router'
 ])
