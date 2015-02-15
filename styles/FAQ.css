@@ -13,6 +13,9 @@
     border-bottom: 1px solid #E1E1E1;
     background: url(../images/list-style-faq.png) left center no-repeat;
 }
+.faq-aside li:hover{
+    color: #F2602C;
+}
 .faq-aside .active{
     background: url(../images/list-style-faq-first.png) left center no-repeat;
 }
