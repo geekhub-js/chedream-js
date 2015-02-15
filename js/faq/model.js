@@ -1,7 +1,9 @@
-angular.module('faq.model', [])
-    .factory('faq', function ($http) {
+angular.module('faq.model', [
+    'cheDream.api'
+])
+    .factory('faq', function (api) {
         var questions = {};
-        $http.get('http://api.chedream.org/faqs.json').success(function(data) {
+        api('/faqs.json').then(function (data) {
             questions = data;
         });
 
