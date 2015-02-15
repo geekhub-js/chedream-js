@@ -39,9 +39,6 @@
     height: 40px;
     border-bottom: 1px solid #E1E1E1;
 }
-.feedback dd a{
-    font-size: 16px;
-}
 .feedback span{
     position: absolute;
     top: 11px;
