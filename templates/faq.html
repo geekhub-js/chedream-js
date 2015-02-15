@@ -1,19 +1,19 @@
-<div class="bg-pages faq-page">
+<div class="bg-pages faq-page" ng-init="chosenId = 0">
     <h1 class="faq-page-title">Регламент та поради</h1>
     <aside class="g-aside faq-aside">
-        <ul ng-repeat="quest in questions">
-            <li class="active"><a href="" title="">{{quest.title}}</a></li>
+        <ul>
+            <li class="active" ng-repeat="quest in questions" id="question#{{quest.id}}"><a href="" title="">{{quest.title}}</a></li>
         </ul>
     </aside>
 
     <section class="faq-content">
         <dl class="faq-question">
             <dt>Питання:</dt>
-            <dd>{{questions[0].question}}</dd>
+            <dd>{{questions[chosenId].question}}</dd>
         </dl>
         <dl class="faq-reply">
             <dt>Відповідь:</dt>
-            <dd>{{questions[0].answer}}</dd>
+            <dd>{{questions[chosenId].answer}}</dd>
         </dl>
     </section>
 </div>
