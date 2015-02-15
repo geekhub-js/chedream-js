@@ -2,7 +2,15 @@
     <h1 class="faq-page-title">Регламент та поради</h1>
     <aside class="g-aside faq-aside">
         <ul>
-            <li class="active"  id="question#{{quest.id}}" ng-repeat="quest in questions" ng-click="changeChosenNumber(quest)"><a href="" title="">{{quest.title}}</a></li>
+            <li id="question#{{quest.id}}"
+                ng-repeat="quest in questions"
+                ng-click="changeChosenNumber(quest)"
+                ng-class="questions[chosenNumber].id === quest.id ? 'active' : ''">
+
+                <a href="" title="">
+                    {{quest.title}}
+                </a>
+            </li>
         </ul>
     </aside>
 
