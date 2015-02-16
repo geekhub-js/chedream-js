@@ -38,11 +38,9 @@ angular.module('faq.model', [
             questions = data.items;
         });*/
 
-        var faq = {
+        return {
             getQuestions: function () {
                 return questions;
             }
         };
-
-        return faq;
     });

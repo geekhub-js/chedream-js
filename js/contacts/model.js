@@ -9,11 +9,9 @@ angular.module('contacts.model', [])
             icq: '999-888-777'
         };
 
-        var contacts = {
+        return {
             getInfo: function () {
                 return info;
             }
         };
-
-        return contacts;
     });
