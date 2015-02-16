@@ -35,7 +35,7 @@ angular.module('faq.model', [
         /*
         var questions = {};
         api('/faqs.json').then(function (data) {
-            questions = data.items;
+            questions = data.items;//or just =data
         });*/
 
         return {
