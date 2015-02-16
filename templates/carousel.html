@@ -9,17 +9,17 @@
         </li>
     </ul>
     <div class="carosel-inner">
-        <ul>
-            <li class="active">
+        <div class="carosel-wrapper">
+            <div class="active">
 
                 <a href="#">
-                    <img ng-src="{{doneDreams[chosen].url}}" alt="carosel item">
+                    <img ng-src="{{doneDreams[chosen].url}}" alt="carousel item">
                 </a>
 
                 <p class="dream-info">
                     {{doneDreams[chosen].completed_description}}
                 </p>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 </div>
