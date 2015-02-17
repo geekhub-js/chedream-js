@@ -15,7 +15,7 @@ chedreamApp.directive('uiCarousel', function() {
                     "id": 55,
                     "title": "aperiam",
                     "url": "images/carosel-item1.jpg",
-                    "completed_description": "Alice ventured to say. 'What is his sorrow?' she asked the Gryphon, half to itself, half to herself, 'if one only knew the right way to fly up into the air, mixed up with the edge of the jury."
+                    "completed_description": "'What is his sorrow?' she asked the Gryphon, half to itself, half to herself, 'if one only knew the right way to fly up into the air, mixed up with the edge of the jury."
                 },
                 {
                     "id": 56,
@@ -47,7 +47,7 @@ chedreamApp.directive('uiCarousel', function() {
                     if ($scope.chosen > 3) {
                         $scope.chosen = 0;
                     }
-                }, 1000); //TODO change time to 5000ms
+                }, 2000); //TODO change time to 5000ms
             };
 
             $scope.resetSliding = function() {

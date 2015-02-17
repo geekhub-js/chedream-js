@@ -3,21 +3,25 @@
         <li ng-repeat="dream in doneDreams"
             ng-click="changeChosen(dream); resetSliding()"
             ng-class="doneDreams[chosen].id === dream.id ? 'active' : ''">
+
             <h2>
                 <a href="#">{{dream.title}}</a>
             </h2>
         </li>
     </ul>
     <div class="carosel-inner">
-        <div class="carosel-wrapper">
-            <div class="active">
+        <ul class="carosel-wrapper">
+            <li class="active"
+                ng-repeat="dream in doneDreams"
+                ng-show="doneDreams[chosen].id === dream.id">
+
                 <a href="#">
-                    <img ng-src="{{doneDreams[chosen].url}}" alt="Carousel Picture">
+                    <img ng-src="{{dream.url}}" alt="Carousel Picture">
                 </a>
                 <p class="dream-info">
-                    {{doneDreams[chosen].completed_description}}
+                    {{dream.completed_description}}
                 </p>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 </div>
