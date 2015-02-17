@@ -1,7 +1,7 @@
-<div class="carosel" id="carosel" ng-init="chosen = 0">
+<div class="carosel" id="carousel" ng-init="chosen = 0; sliding()">
     <ul class="carosel-nav">
         <li ng-repeat="dream in doneDreams"
-            ng-click="changeChosen(dream)"
+            ng-click="changeChosen(dream); resetSliding()"
             ng-class="doneDreams[chosen].id === dream.id ? 'active' : ''">
             <h2>
                 <a href="#">{{dream.title}}</a>
