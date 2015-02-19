@@ -47,7 +47,7 @@ chedreamApp.directive('uiCarousel', function() {
                     if ($scope.chosen > 3) {
                         $scope.chosen = 0;
                     }
-                }, 2000); //TODO change time to 5000ms
+                }, 3000); //TODO change time to 5000ms
             };
 
             $scope.resetSliding = function() {
