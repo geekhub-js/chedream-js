@@ -93,21 +93,108 @@ textarea:focus {
          url('../fonts/DaxPro-Bold.svg#DaxPro-Bold') format('svg');
 }
 @font-face {
-  font-family: 'icons';
-  src: url('../fonts/icons.eot?96667888');
-  src: url('../fonts/icons.eot?96667888#iefix') format('embedded-opentype'),
-       url('../fonts/icons.woff?96667888') format('woff'),
-       url('../fonts/icons.ttf?96667888') format('truetype'),
-       url('../fonts/icons.svg?96667888#icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'icons';
+    src: url('../fonts/icons.eot?76194991');
+    src: url('../fonts/icons.eot?76194991#iefix') format('embedded-opentype'),
+    url('../fonts/icons.woff?76194991') format('woff'),
+    url('../fonts/icons.ttf?76194991') format('truetype'),
+    url('../fonts/icons.svg?76194991#icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
+.animate-spin {
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+    display: inline-block;
+}
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@-o-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@-ms-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+@keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -moz-transform: rotate(359deg);
+        -o-transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
+.ico-mail-alt:before { content: '\e814'; }
+.ico-skype-1:before { content: '\e86e'; }
+.ico-phone-1:before { content: '\e883'; }
 .ico-tw:before { content: '\e800'; }
 .ico-vk:before { content: '\e801'; }
 .ico-fb:before { content: '\e810'; }
 .ico-gplus:before { content: '\e803'; }
 .ico-cancel:before { content: '\e837'; }
+.ico-spin5:before { content: '\e87e'; }
 /*-------------------------------------GLOBAL--------------------------------------*/
 body {
     font-family: 'DaxPro', sans-serif;
@@ -555,6 +642,9 @@ ul.main-menu li:last-child {
     color: #fff;
     background: rgba(0,0,0,.25);
 }
+.main-content {
+    text-align: center;
+}
 .dreams-preview:after {
     content: "";
     clear: both;
@@ -707,7 +797,7 @@ ul.main-menu li:last-child {
 footer {
     overflow: hidden;
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 5px 0 40px 0;
 }
 .copy {
