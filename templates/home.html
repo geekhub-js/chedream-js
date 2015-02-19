@@ -1,447 +1,63 @@
 <ui-carousel></ui-carousel>
-<section>
-<ul class="dreams-preview">
-<li>
-    <span class="favorite"></span>
+<section class="main-content">
+    <ul class="dreams-preview">
+        <li ng-repeat="dream in dreams">
+            <span class="favorite"></span>
 
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
+            <h3>
+                <a href="#">{{dream.title}}</a>
+            </h3>
 
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
+            <div class="dreams-preview-container">
+                <div class="owner">
+                    <img ng-src="{{dream.avatar}}" alt="Author avatar">
 
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
+                    <p><a href="#">{{dream.author}}</a></p>
+                </div>
+                <span class="triangle"></span>
+                <a href="#"><img class="img-thumbnail" ng-src="{{dream.picture}}" alt="Dream preview image"></a>
 
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-<li>
-    <span class="favorite-checked"></span>
-
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
-
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
-
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
-
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-<li>
-    <span class="favorite"></span>
-
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
-
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
-
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
-
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-<li>
-    <span class="favorite"></span>
-
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
-
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
-
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
-
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-<li>
-    <span class="favorite"></span>
-
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
-
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
-
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
-
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-<li>
-    <span class="favorite"></span>
-
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
-
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
-
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
-
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-<li>
-    <span class="favorite"></span>
-
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
-
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
-
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
-
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-<li>
-    <span class="favorite"></span>
-
-    <h3>
-        <a href="#">Реконструкція скверу за будівлею облдержадміністрації</a>
-    </h3>
-
-    <div class="dreams-preview-container">
-        <div class="owner">
-            <img src="images/author.png" alt="Author avatar">
-
-            <p><a href="#">Інна Кулік</a></p>
-        </div>
-        <span class="triangle"></span>
-        <a href="#"><img class="img-thumbnail" src="images/img.png" alt="Dream preview image"></a>
-
-        <div class="dreams-rank">
-                        <span class="supported">
-                            <span>51</span>
-                            Підтримали
-                        </span>
-                        <span class="rating">
-                            Рейтинг
-                            <span>4</span>
-                        </span>
-        </div>
-    </div>
-    <div class="work-progress">
-        <div class="finance" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="instruments" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-        <div class="people" data-pct="100">
-            <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-                <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                        stroke-dashoffset="0"></circle>
-            </svg>
-        </div>
-    </div>
-    <a class="btn-support" href="#">Підтримати</a>
-</li>
-</ul>
+                <div class="dreams-rank">
+            <span class="supported">
+                <span>{{dream.favorites_count}}</span>
+                {{dream.favorites_count_word}}
+            </span>
+            <span class="rating">
+                Рейтинг
+                <span>{{dream.rating}}</span>
+            </span>
+                </div>
+            </div>
+            <div class="work-progress">
+                <div class="finance" data-pct="100">
+                    <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
+                                stroke-dashoffset="0"></circle>
+                        <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
+                                stroke-dashoffset="0"></circle>
+                    </svg>
+                </div>
+                <div class="instruments" data-pct="100">
+                    <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
+                                stroke-dashoffset="0"></circle>
+                        <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
+                                stroke-dashoffset="0"></circle>
+                    </svg>
+                </div>
+                <div class="people" data-pct="100">
+                    <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
+                                stroke-dashoffset="0"></circle>
+                        <circle class="bar" r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
+                                stroke-dashoffset="0"></circle>
+                    </svg>
+                </div>
+            </div>
+            <a class="btn-support" href="#">Підтримати</a>
+        </li>
+    </ul>
+    <span class="ico-spin5 animate-spin"></span>
 </section>
 
 <div class="popup popup-login" id="popup-login">
