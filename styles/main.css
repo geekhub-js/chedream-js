@@ -707,6 +707,7 @@ ul.main-menu li:last-child {
     width: 100%;
 }
 .dreams-preview .owner img {
+    float: left;
     margin-top: 12px;
 }
 .dreams-preview .owner p {
