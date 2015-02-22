@@ -642,6 +642,21 @@ ul.main-menu li:last-child {
     color: #fff;
     background: rgba(0,0,0,.25);
 }
+.animate-carousel {
+    -webkit-transition: all linear 1s;
+    transition: all linear 1s;
+}
+.animate-carousel.ng-hide {
+    margin-left: 500px;
+}
+.animate-carousel.ng-hide-add,
+.animate-carousel.ng-hide-remove,
+.animate-carousel.ng-hide-remove.ng-hide-remove-active {
+    margin-left: 0px;
+}
+.animate-carousel.ng-hide-add.ng-hide-add-active {
+    margin-left: -500px;
+}
 .main-content {
     text-align: center;
 }

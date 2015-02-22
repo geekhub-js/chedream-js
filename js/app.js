@@ -1,6 +1,7 @@
 var chedreamApp = angular.module('cheDream.app', [
     'routing',
-    'ui.router'
+    'ui.router',
+    'ngAnimate'
 ])
     .config(function ($urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
