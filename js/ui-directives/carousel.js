@@ -30,14 +30,13 @@ chedreamApp.directive('uiCarousel', function() {
                     "completed_description": "Rabbit say, 'A barrowful of WHAT?' thought Alice; 'but a grin without a porpoise.' 'Wouldn't it really?' said Alice to herself, (not in a natural way again. 'I wonder what they WILL do next! If they."
                 }
             ];
-            /*
-            api('/dreams?limit=4&status=compleated&sort_by=status_update&sort_order=DESC').then(function (data) {
-                $scope.doneDreams = data.items;//new special url
-            });*/
+
+//            api('/dreams?limit=4&status=compleated&sort_by=status_update&sort_order=DESC').then(function (data) {
+//                $scope.doneDreams = data.items;//new special url
+//            });
 
             $scope.changeChosen = function(el) {
                 for ($scope.chosen = 0; $scope.doneDreams[$scope.chosen].id !== el.id; $scope.chosen++) {}
-
             };
 
             var stop; //variable for interval function
@@ -47,7 +46,7 @@ chedreamApp.directive('uiCarousel', function() {
                     if ($scope.chosen > 3) {
                         $scope.chosen = 0;
                     }
-                }, 3000); //TODO change time to 5000ms
+                }, 2000); //TODO change time to 5000ms
             };
 
             $scope.resetSliding = function() {

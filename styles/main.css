@@ -370,17 +370,32 @@ header .social li span {
     position: relative;
     float: right;
     height: 75px;
-    margin-left: 65px;
+    margin-left: 5px;
 }
 .search .search-link {
     display: block;
     height: 75px;
+    margin-left: 60px;
     padding: 29px 35px 0 15px;
     background: url(../images/ico_search.png) no-repeat right 10px top 28px;
     color: #9b9b9b;
 }
 .search .search-link:hover {
     background: #ddd url(../images/ico_search.png) no-repeat right 10px top 28px;
+}
+#search-block input {
+    display: none;
+}
+.searching input {
+    display: inline-block !important;
+    height: 77px;
+    margin-top: -1px;
+    padding: 0 47px 0 15px;
+    background: #333 url(../images/ico_search.png) no-repeat right 10px top 28px;
+    color: #fff;
+}
+.searching a {
+    display: none !important;
 }
 .search form,
 .account-bar,
