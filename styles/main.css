@@ -391,7 +391,7 @@ header .social li span {
     height: 77px;
     margin-top: -1px;
     padding: 0 47px 0 15px;
-    background: #333 url(../images/ico_search.png) no-repeat right 10px top 28px;
+    background: #333 url(../images/ico_search_act.png) no-repeat right 10px top 28px;
     color: #fff;
 }
 .searching a {
