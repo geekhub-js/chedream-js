@@ -32,11 +32,11 @@ angular.module('faq.model', [
                 "slug": "rerum"
             }
         ];
-        /*
-        var questions = {};
-        api('/faqs.json').then(function (data) {
-            questions = data.items;//or just =data
-        });*/
+
+//        var questions = {};
+//        api('/faqs.json').then(function (data) {
+//            questions = data.items;//or just =data
+//        });
 
         return {
             getQuestions: function () {
