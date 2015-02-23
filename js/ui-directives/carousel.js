@@ -2,7 +2,7 @@ chedreamApp.directive('uiCarousel', function() {
     return {
         restrict: 'E',
         scope: {},
-        controller: function($scope, $interval, $state, $rootScope) {
+        controller: function($scope, $interval, $state) {
             //fake data
             $scope.doneDreams = [
                 {
@@ -39,7 +39,6 @@ chedreamApp.directive('uiCarousel', function() {
                 //going to another page - dream
 //                if ($scope.doneDreams[$scope.chosen].id === el.id) {
 //                    $state.go('<some state>');
-//                    $rootScope.title = 'Черкаська мрія - ' + el.title;
 //                }
                 for ($scope.chosen = 0; $scope.doneDreams[$scope.chosen].id !== el.id; $scope.chosen++) {}
             };
