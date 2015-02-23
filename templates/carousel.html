@@ -16,7 +16,7 @@
                 ng-repeat="dream in doneDreams"
                 ng-show="doneDreams[chosen].id === dream.id">
 
-                <a href="#">
+                <a> <!-- ui-sref="{{dream.title}}" ng-click="title = 'Черкаська мрія - ' + {{dream.title}}" -->
                     <img ng-src="{{dream.url}}" alt="Carousel Picture">
                 </a>
                 <p class="dream-info">
