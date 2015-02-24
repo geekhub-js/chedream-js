@@ -1,6 +1,6 @@
 angular.module('cheDream.api', [])
 
-    .constant('server', 'http://api.chedream.org')
+    .constant('server', 'http://chedream.alex.ekreative.com')
 
     .factory('api', function(server, $http) {
         return function(url) {

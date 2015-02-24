@@ -10,17 +10,19 @@
 
             <div class="dreams-preview-container">
                 <div class="owner">
-                    <img ng-src="{{dream.avatar}}" alt="Author avatar">
+                    <img src="images/author.png" alt="Author avatar"><!-- ng-src="{{dream.avatar}}"-->
 
-                    <p><a href="#">{{dream.author}}</a></p>
+                    <p><a href="#">Інна Кулік</a></p><!-- ng-src="{{dream.author}}"-->
                 </div>
                 <span class="triangle"></span>
-                <a href="#"><img class="img-thumbnail" ng-src="{{dream.picture}}" alt="Dream preview image"></a>
+                <a href="#">
+                    <img class="img-thumbnail" src="images/img.png" alt="Dream preview image"><!-- ng-src="{{dream.picture}}"-->
+                </a>
 
                 <div class="dreams-rank">
             <span class="supported">
-                <span>{{dream.favorites_count}}</span>
-                {{dream.favorites_count_word}}
+                <span>51</span><!-- {{dream.favorites_count}}-->
+                Підтримало<!-- {{dream.favorites_count_word}}"-->
             </span>
                 </div>
             </div>

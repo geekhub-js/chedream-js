@@ -2,7 +2,7 @@
     <ul class="carosel-nav">
         <li ng-repeat="dream in doneDreams"
             ng-click="changeChosen(dream); resetSliding()"
-            ng-class="doneDreams[chosen].id === dream.id ? 'active' : ''">
+            ng-class="doneDreams[chosen].slug === dream.slug ? 'active' : ''">
 
             <h2>
                 <a href="#">{{dream.title}}</a>
@@ -14,10 +14,10 @@
             <li class="animate-carousel active"
                 ng-animate
                 ng-repeat="dream in doneDreams"
-                ng-show="doneDreams[chosen].id === dream.id">
+                ng-show="doneDreams[chosen].slug === dream.slug">
 
                 <a> <!-- ui-sref="{{dream.title}}" -->
-                    <img ng-src="{{dream.url}}" alt="Carousel Picture">
+                    <img src="images/carosel-item2.jpg" alt="Carousel Picture"><!--ng-src="{{dream.url}}" -->
                 </a>
                 <p class="dream-info">
                     {{dream.completed_description}}

@@ -4,7 +4,7 @@
         <ul>
             <li ng-repeat="quest in questions"
                 ng-click="changeChosenNumber(quest)"
-                ng-class="questions[chosenNumber].id === quest.id ? 'active' : ''">
+                ng-class="questions[chosenNumber].slug === quest.slug ? 'active' : ''">
 
                 <a href="" title="">
                     {{quest.title}}
