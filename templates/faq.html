@@ -1,10 +1,10 @@
-<div class="bg-pages faq-page" ng-init="current = 0">
+<div class="bg-pages faq-page" ng-init="current = position()">
     <h1 class="faq-page-title">Регламент та поради</h1>
     <aside class="g-aside faq-aside">
         <ul>
             <li ng-repeat="quest in questions()"
                 ng-click="changeChosenNumber(quest)"
-                ng-class="position(guest) == current ? 'active' : ''">
+                ng-class="position(quest) == current ? 'active' : ''">
 
                 <a href="" title="">
                     {{ quest.title }}
