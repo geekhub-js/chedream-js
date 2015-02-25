@@ -28,7 +28,7 @@ angular.module('home.model', [
                     newDreams = data.items.splice(dreams.length, 4);
                 });
                 if (newDreams.length === dreams.length) {
-                    angular.element( '.ico-spin5.animate-spin').hide();
+                    angular.element( document.querySelector('.ico-spin5.animate-spin') ).hide();
                 }
                 dreams.concat(newDreams);
             }
