@@ -3,8 +3,10 @@ angular.module('faq.controller', [
 ])
     .controller('FaqCtrl', function($scope, faq) {
         $scope.questions = faq.getQuestions;
+        $scope.question = faq.getQuestion;
+        $scope.position = faq.position;
+        $scope.current = faq.position();
         $scope.changeChosenNumber = function(el) {
-            for ($scope.chosenNumber = 0; $scope.questions[$scope.chosenNumber].id !== el.id; $scope.chosenNumber++) {}
-
+            $scope.current = faq.position(el);
         };
     });
