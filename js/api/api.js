@@ -10,6 +10,8 @@ angular.module('cheDream.api', [])
             $loading.start(name);
             return $http.get(server + url).then(function(result) {
                 $loading.finish(name);
+                console.info(result);
+
                 return result.data || [];
             }, function(err) {
                 $loading.finish(name);

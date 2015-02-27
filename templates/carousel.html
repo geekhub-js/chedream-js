@@ -1,4 +1,4 @@
-<div class="carosel" id="carousel" ng-init="chosen = 0; sliding()">
+<div class="carosel" id="carousel" ng-init="chosen = 0; sliding()"  dw-loading="carousel" dw-loading-options="{text: 'Loading dreams...'}">
     <ul class="carosel-nav">
         <li ng-repeat="dream in doneDreams"
             ng-click="changeChosen(dream); resetSliding()"

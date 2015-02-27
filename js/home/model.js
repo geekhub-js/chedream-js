@@ -3,7 +3,7 @@ angular.module('home.model', [
 ])
     .factory('dreams', function (api) {
          var dreams = [];
-         api('/dreams.json?limit=8').then(function (data) {
+         api('/dreams.json?limit=8', 'dreams').then(function (data) {
             dreams = data.items;
          });
 
