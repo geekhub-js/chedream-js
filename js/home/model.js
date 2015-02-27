@@ -2,78 +2,10 @@ angular.module('home.model', [
     'cheDream.api'
 ])
     .factory('dreams', function (api) {
-        var dreams = [
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 51,
-                rating: 4
-            },
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 1,
-                rating: 4
-            },
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 0,
-                rating: 4
-            },
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 51,
-                rating: 4
-            },
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 51,
-                rating: 4
-            },
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 51,
-                rating: 4
-            },
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 51,
-                rating: 4
-            },
-            {
-                title: 'Реконструкція скверу за будівлею облдержадміністрації',
-                avatar: 'images/author.png',
-                author: 'Інна Кулік',
-                picture: 'images/img.png',
-                favorites_count: 51,
-                rating: 4
-            }
-        ];
-
-        /*
-         var dreams = {};
-         api('/dreams.json?limit=8').then(function (data) {
+         var dreams = [];
+         api('/dreams.json?limit=8', 'dreams').then(function (data) {
             dreams = data.items;
-         });*/
+         });
 
         dreams.forEach(function(el) {
             if (el.favorites_count > 1) {
@@ -86,20 +18,21 @@ angular.module('home.model', [
             }
         });
 
-        //TODO test it
-        /*
-        angular.element( document.querySelector( window ) ).bind('scroll', bindScroll);
+//        TODO test it
+        angular.element( window ).on('scroll', bindScroll);
         function bindScroll() {
-            if (window.innerHeight + document.body.scrollTop > document.body.offsetHeight - 120) {
+            if ((window.innerHeight + window.scrollY) >= document.querySelector('.wrapper').offsetHeight - 100) {
                 var newDreams = {},
-                    apiSting = '/dreams.json?limit=' + (dreams.length + 4);
-                api(apiSting).then(function (data) {
+                    apiString = '/dreams.json?limit=' + (dreams.length + 4);
+                api(apiString).then(function (data) {
                     newDreams = data.items.splice(dreams.length, 4);
                 });
+                if (newDreams.length === dreams.length) {
+                    angular.element( document.querySelector('.ico-spin5.animate-spin') ).hide();
+                }
                 dreams.concat(newDreams);
             }
         }
-        */
 
         return {
             getDreams: function () {

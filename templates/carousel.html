@@ -1,8 +1,8 @@
-<div class="carosel" id="carousel" ng-init="chosen = 0; sliding()">
+<div class="carosel" id="carousel" ng-init="chosen = 0; sliding()"  dw-loading="carousel" dw-loading-options="{text: 'Loading dreams...'}">
     <ul class="carosel-nav">
         <li ng-repeat="dream in doneDreams"
             ng-click="changeChosen(dream); resetSliding()"
-            ng-class="doneDreams[chosen].id === dream.id ? 'active' : ''">
+            ng-class="doneDreams[chosen].slug === dream.slug ? 'active' : ''">
 
             <h2>
                 <a href="#">{{dream.title}}</a>
@@ -11,12 +11,13 @@
     </ul>
     <div class="carosel-inner">
         <ul class="carosel-wrapper">
-            <li class="active"
+            <li class="animate-carousel active"
+                ng-animate
                 ng-repeat="dream in doneDreams"
-                ng-show="doneDreams[chosen].id === dream.id">
+                ng-show="doneDreams[chosen].slug === dream.slug">
 
-                <a href="#">
-                    <img ng-src="{{dream.url}}" alt="Carousel Picture">
+                <a> <!-- ui-sref="{{dream.title}}" -->
+                    <img src="images/carosel-item2.jpg" alt="Carousel Picture"><!--ng-src="{{dream.url}}" -->
                 </a>
                 <p class="dream-info">
                     {{dream.completed_description}}

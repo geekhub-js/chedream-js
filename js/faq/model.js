@@ -4,8 +4,8 @@ angular.module('faq.model', [
     .factory('faq', function (api) {
         var questions = [];
 
-        api('/faqs.json').then(function (data) {
-            questions = data.items;//or just =data
+        api('/faqs.json', 'faqs').then(function (data) {
+            questions = data.faqs;
         });
 
         return {

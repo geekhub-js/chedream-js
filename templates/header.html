@@ -1,5 +1,5 @@
 <header>
-    <h1><a class="logo" ui-sref="home"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></h1>
+    <h1><a class="logo" ui-sref="home" ng-click="title = 'Черкаська мрія - Головна'"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></h1>
     <nav>
         <ul class="main-menu">
             <li><a ui-sref="faq">FAQ</a></li>
@@ -11,7 +11,10 @@
             <input type="submit" value="">
             <input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
         </form>
-        <a class="search-link" href="#">Пошук</a>
+        <div id="search-block">
+            <input type="text" class="field-search" placeholder="Що шукаємо?" name="search_text">
+            <a class="search-link" href="#">Пошук</a>
+        </div>
     </div>
     <ul class="social">
         <li>
@@ -27,7 +30,7 @@
             <a href="#"><span class="ico-tw"></span></a>
         </li>
     </ul>
-    <span class="social-title">Увійти через</span>
+    <span class="social-title" id="social-title-area">Увійти через</span>
     <ul class="account-bar">
         <li>
             <a class="user-photo" href="#"><img src="images/user-photo.jpg" alt="User photo"></a>

@@ -1,7 +1,8 @@
 angular.module('faq.controller', [
     'faq.model'
 ])
-    .controller('FaqCtrl', function($scope, faq) {
+    .controller('FaqCtrl', function($scope, faq, $rootScope) {
+        $rootScope.title = 'FAQ';
         $scope.questions = faq.getQuestions;
         $scope.question = faq.getQuestion;
         $scope.position = faq.position;
