@@ -1,12 +1,18 @@
 angular.module('cheDream.api', [])
 
-    .constant('server', 'http://chedream.alex.ekreative.com')
+    .constant('server', 'http://api.chedream.org')
 
-    .factory('api', function(server, $http) {
-        return function(url) {
+    .factory('api', function(server, $http, $loading) {
+        return function(url, name) {
+            $loading.setDefaultOptions({
+                className: 'loader'
+            });
+            $loading.start(name);
             return $http.get(server + url).then(function(result) {
+                $loading.finish(name);
                 return result.data || [];
             }, function(err) {
+                $loading.finish(name);
                 console.log('Error:', err);
             });
         };
