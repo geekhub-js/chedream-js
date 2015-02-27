@@ -3,5 +3,5 @@ angular.module('home.controller', [
 ])
     .controller('HomeCtrl', function($scope, dreams, $rootScope) {
         $rootScope.title = 'Головна';
-        $scope.dreams = dreams.getDreams();
+        $scope.dreams = dreams.getDreams;
     });
