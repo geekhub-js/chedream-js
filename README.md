@@ -2,9 +2,9 @@
 
 ## Installing-Updating
     npm install
-    ./node_module/.bin/bower install
-    ./node_module/.bin/gulp
+    ./node_modules/.bin/bower install
+    ./node_modules/.bin/gulp
 
 ## Add new package
     npm install -S <packageName>
-    ./node_module/.bin/bower install -S <packageName>
+    ./node_modules/.bin/bower install -S <packageName>
