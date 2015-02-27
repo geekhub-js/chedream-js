@@ -998,3 +998,6 @@ footer .social li span {
 .popup-thanks .popup-content {
     background: #fff url(../images/popup-thanks.png) no-repeat center 70px;
 }
+.loader {
+    background-color: rgba(0, 0, 0, .5);
+}

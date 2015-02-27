@@ -1,0 +1,19 @@
+{
+  "name": "chedream-js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/geekhub-js/chedream-js",
+  "authors": [
+    "Alex Moshta <ahonymous@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-loading": "~0.1.4"
+  }
+}
