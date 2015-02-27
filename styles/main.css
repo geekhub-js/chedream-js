@@ -576,9 +576,6 @@ ul.main-menu li:last-child {
     bottom: 7px;
     z-index: -1;
     content: "";
-    -webkit-box-shadow:  0 0 20px rgba(0,0,0,1);
-    box-shadow: 0 0 20px rgba(0,0,0,1);
-    border-radius: 100px / 10px;
 }
 
 .carosel-nav {
