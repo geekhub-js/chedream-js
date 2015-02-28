@@ -8,10 +8,6 @@ chedreamApp.directive('uiCarousel', function() {
             });
 
             $scope.changeChosen = function(el) {
-                //going to another page - dream
-//                if ($scope.doneDreams[$scope.chosen].id === el.id) {
-//                    $state.go('<some state>');
-//                }
                 for ($scope.chosen = 0; $scope.doneDreams[$scope.chosen].slug !== el.slug; $scope.chosen++) {}
             };
 

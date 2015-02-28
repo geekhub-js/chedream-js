@@ -27,7 +27,7 @@ angular.module('routing', [
                 controller: 'ContactsCtrl'
             })
             .state('dream', {
-                url: '/dream',
+                url: '/dream/{slug}',
                 templateUrl: 'templates/dream.html',
                 controller: 'DreamCtrl'
             })

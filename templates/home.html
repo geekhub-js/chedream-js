@@ -6,7 +6,7 @@
                 <span class="favorite"></span>
 
                 <h3>
-                    <a ui-sref="dream">{{dream.title}}</a>
+                    <a ui-sref="dream({ slug: dream.slug })">{{dream.title}}</a>
                 </h3>
 
                 <div class="dreams-preview-container">
@@ -16,7 +16,7 @@
                         <p><a href="#">Інна Кулік</a></p><!-- ng-src="{{dream.author}}"-->
                     </div>
                     <span class="triangle"></span>
-                    <a ui-sref="dream">
+                    <a ui-sref="dream({ slug: dream.slug })">
                         <img class="img-thumbnail" src="images/img.png" alt="Dream preview image"><!-- ng-src="{{dream.picture}}"-->
                     </a>
 
@@ -62,7 +62,7 @@
                         </svg>
                     </div>
                 </div>
-                <a class="btn-support" ui-sref="dream">Підтримати</a>
+                <a class="btn-support" ui-sref="dream({ slug: dream.slug })">Підтримати</a>
             </li>
         </ul>
     </section>
