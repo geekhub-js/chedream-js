@@ -16,7 +16,7 @@
                 ng-repeat="dream in doneDreams"
                 ng-show="doneDreams[chosen].slug === dream.slug">
 
-                <a> <!-- ui-sref="{{dream.title}}" -->
+                <a ui-sref="dream">
                     <img src="images/carosel-item2.jpg" alt="Carousel Picture"><!--ng-src="{{dream.url}}" -->
                 </a>
                 <p class="dream-info">
