@@ -215,11 +215,6 @@ a:link, a:hover {
 a:hover {
     color: #dd3509;
 }
-.bg-pages{
-    overflow: hidden;
-    padding: 0 30px;
-    background: #fff;
-}
 [class^="ico-"], [class*=" ico-"] {
     font-family: "icons";
     speak: none;

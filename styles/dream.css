@@ -1,5 +1,7 @@
 .dream-page {
+    overflow: hidden;
     padding: 0;
+    background: #fff;
 }
 .dream-page .dream-logo {
     display: block;
@@ -208,6 +210,10 @@ aside .dream-estimate .plus-add-help:hover {
     margin: 0 0 14px 0;
     float: left;
 }
+.dream-page .description {
+    padding-bottom: 50px;
+    float: left;
+}
 .dream-page .dream-edit {
     float: right;
     background: url(../images/dream-edit.png) center center no-repeat;
@@ -237,36 +243,6 @@ aside .dream-estimate .plus-add-help:hover {
     clear: both;
     margin: 0 0 22px 0;
     font-size: 14px;
-}
-.dream-page section article .dream-docs {
-    margin: 34px 0 0;
-}
-.dream-page section article .dream-docs li {
-    display: inline;
-    padding: 6px 14px 9px 32px;
-    margin: 0 1px 0 0;
-}
-.dream-page section article .dream-docs li a {
-    font-size: 14px;
-}
-.dream-page section article .dream-docx {
-    background: url(../images/doc-docs.png) 11px center no-repeat, #F4F4F4;
-}
-.dream-page section article .dream-docx:hover {
-    background: url(../images/doc-docs.png) 11px center no-repeat, #ECECFB;
-}
-
-.dream-page section article .dream-xslx {
-    background: url(../images/doc-xslx.png) 11px center no-repeat, #F4F4F4;
-}
-.dream-page section article .dream-xslx:hover {
-    background: url(../images/doc-xslx.png) 11px center no-repeat, #ECECFB;
-}
-.dream-page section article .dream-pdf {
-    background: url(../images/doc-pdf.png) 11px center no-repeat, #F4F4F4;
-}
-.dream-page section article .dream-pdf:hover {
-    background: url(../images/doc-pdf.png) 11px center no-repeat, #ECECFB;
 }
 .dream-page section .dream-participants {
     overflow: hidden;
