@@ -2,6 +2,7 @@ angular.module('routing', [
     'home.controller',
     'faq.controller',
     'contacts.controller',
+    'dream.controller',
     //'addDream.controller',
     //'editDream.controller',
     //'editProfile.controller',
@@ -24,6 +25,11 @@ angular.module('routing', [
                 url: '/contacts',
                 templateUrl: 'templates/contacts.html',
                 controller: 'ContactsCtrl'
+            })
+            .state('dream', {
+                url: '/dream',
+                templateUrl: 'templates/dream.html',
+                controller: 'DreamCtrl'
             })
         ;
     });
