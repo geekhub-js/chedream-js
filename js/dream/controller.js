@@ -3,7 +3,7 @@ angular.module('dream.controller', [
 ])
     .controller('DreamCtrl', function($scope, dream, $rootScope) {
 
-        $scope.dream = dream.getDream();
+        $scope.currentDream = dream.getDream;
         $rootScope.title = dream.slug;
 
     });
