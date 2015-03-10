@@ -17,12 +17,12 @@ angular.module('routing', [
             })
             .state('faq', {
                 url: '/faq',
-                templateUrl: 'templates/faq.html',
+                templateUrl: 'js/faq/view/faq.html',
                 controller: 'FaqCtrl'
             })
             .state('contacts', {
                 url: '/contacts',
-                templateUrl: 'templates/contacts.html',
+                templateUrl: 'js/contacts/view/contacts.html',
                 controller: 'ContactsCtrl'
             })
         ;
