@@ -1,5 +1,5 @@
 <header>
-    <h1><a class="logo" ui-sref="home" ng-click="title = 'Черкаська мрія - Головна'"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></h1>
+    <h1><a class="logo" ui-sref="home" ng-click="title = 'Головна'"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></h1>
     <nav>
         <ul class="main-menu">
             <li><a ui-sref="faq">FAQ</a></li>
@@ -55,5 +55,5 @@
             <a class="logout" href="#">logout</a>
         </li>
     </ul>
-    <a class="add-dream" href="#">Додати мрію</a>
+    <a class="add-dream" ui-sref="edit-dream({ slug: new })">Додати мрію</a>
 </header>
