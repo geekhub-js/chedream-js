@@ -4,7 +4,7 @@ angular.module('home.model', [
     .factory('dreams', function (api) {
          var dreams = [];
          api('/dreams.json?limit=8', 'dreams').then(function (data) {
-            dreams = data.items;
+            dreams = data.dreams;
          });
 
         dreams.forEach(function(el) {
@@ -25,7 +25,7 @@ angular.module('home.model', [
                 var newDreams = {},
                     apiString = '/dreams.json?limit=' + (dreams.length + 4);
                 api(apiString).then(function (data) {
-                    newDreams = data.items.splice(dreams.length, 4);
+                    newDreams = data.dreams.splice(dreams.length, 4);
                 });
                 if (newDreams.length === dreams.length) {
                     angular.element( document.querySelector('.ico-spin5.animate-spin') ).hide();
