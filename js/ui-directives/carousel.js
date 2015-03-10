@@ -3,8 +3,8 @@ chedreamApp.directive('uiCarousel', function() {
         restrict: 'E',
         scope: {},
         controller: function($scope, api, $interval, $state) {
-            api('/dreams?limit=4&status=compleated&sort_by=updatedAt&sort_order=DESC', 'carousel').then(function (data) {
-                $scope.doneDreams = data.dreams;
+            api('/dreams?limit=4&status=compleated&sort_by=status_update&sort_order=DESC', 'carousel').then(function (data) {
+                $scope.doneDreams = data.items;
             });
 
             $scope.changeChosen = function(el) {
