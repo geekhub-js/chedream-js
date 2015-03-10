@@ -31,5 +31,10 @@ angular.module('routing', [
                 templateUrl: 'templates/dream.html',
                 controller: 'DreamCtrl'
             })
+            .state('edit-dream', {
+                url: '/edit-dream/{slug}',
+                templateUrl: 'templates/editDream.html',
+                controller: 'EditDreamCtrl'
+            })
         ;
     });
