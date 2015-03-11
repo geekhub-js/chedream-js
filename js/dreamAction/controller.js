@@ -1,6 +1,9 @@
 angular.module('dreamAction.controller', [
     'dreamAction.model'
 ])
-    .controller('DreamActionController', function() {
+    .controller('DreamActionCtrl', function($scope, dreamAction, $rootScope) {
+
+        $scope.currentDreamAction = dreamAction.getDreamAction;
+        $rootScope.title = dreamAction.slug;
 
     });

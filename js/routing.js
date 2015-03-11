@@ -3,8 +3,7 @@ angular.module('routing', [
     'faq.controller',
     'contacts.controller',
     'dream.controller',
-    //'addDream.controller',
-    //'editDream.controller',
+    'dreamAction.controller',
     //'editProfile.controller',
     //'userProfile.controller',
     'ui.router'
