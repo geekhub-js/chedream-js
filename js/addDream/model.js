@@ -3,11 +3,9 @@ angular.module('addDream.model', [
 ])
     .factory('addDream', function () {
 
-        var dream = {};
-
         return {
             getDream: function () {
-                return dream;
+                return {};
             }
         };
 
