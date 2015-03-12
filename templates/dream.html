@@ -1,10 +1,9 @@
 <div class="dream-page" ng-init="dream = currentDream()" dw-loading="dream" dw-loading-options="{text: 'Loading dream...'}">
     <a class="dream-logo" href="#">
-        <img src="images/dream-logo.jpg" alt="{{dream.title}}" width="649" height="357" />
-            <!-- ng-src="{{dream.logo}}"  -->
+        <img ng-src="{{dream.logo}}" alt="{{dream.title}}" width="649" height="357" />
     </a>
     <a class="dream-video" href="#">
-        <!--<video ng-src="{{dream.video}}" />-->
+        <video ng-src="{{dream.video}}"></video>
     </a>
     <ul class="dream-img">
         <li ng-repeat="picture in dream.pictures">
@@ -14,11 +13,9 @@
         </li>
     </ul>
     <aside>
-        <img class="dream-author-ava" src="images/dream-author-ava.jpg" alt="" width="66" height="66" />
-         <!--ng-src="{{dream.authorAvatar}}"  -->
+        <img class="dream-author-ava" ng-src="{{dream.authorAvatar}}" alt="" width="66" height="66" />
         <p class="dream-author-name">
             <a href="#">{{dream.author}}</a>
-
         </p>
         <a class="fund-raising" href="#">Розпочати збір коштів</a>
         <h2>Підтримати</h2>
@@ -33,7 +30,7 @@
                 <span class="circle work"></span><a href="#">Провести роботи</a>
             </li>
         </ul>
-        <p class="dream-support-text"> Підтримало<span class="dream-support-number">541</span></p>
+        <p class="dream-support-text">Підтримало<span class="dream-support-number">541</span></p>
         <div class="work-progress">
             <div class="finance"
                  data-pct="{{100 * dream.dream_financial_contributions / dream.dream_financial_resources}}"
