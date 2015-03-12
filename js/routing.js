@@ -3,9 +3,8 @@ angular.module('routing', [
     'faq.controller',
     'contacts.controller',
     'dream.controller',
-    'dreamAction.controller',
-    //'editProfile.controller',
-    //'userProfile.controller',
+    'editDream.controller',
+    'addDream.controller',
     'ui.router'
 ])
     .config(function ($stateProvider) {
@@ -30,10 +29,15 @@ angular.module('routing', [
                 templateUrl: 'templates/dream.html',
                 controller: 'DreamCtrl'
             })
-            .state('dreamAction', {
-                url: '/dreamAction/{slug}',
+            .state('editDream', {
+                url: '/editDream/{slug}',
                 templateUrl: 'templates/dreamAction.html',
-                controller: 'DreamActionCtrl'
+                controller: 'EditDreamCtrl'
+            })
+            .state('addDream', {
+                url: '/addDream',
+                templateUrl: 'templates/dreamAction.html',
+                controller: 'AddDreamCtrl'
             })
         ;
     });

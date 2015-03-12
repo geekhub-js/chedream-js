@@ -1,4 +1,4 @@
-<section class="bg-pages" ng-init="dream = currentDreamAction()" dw-loading="dreamAction" dw-loading-options="{text: 'Loading dream...'}">
+<section class="bg-pages" ng-init="dream = currentDream()">
     <form method="post">
         <fieldset class="media">
             <legend>Додати</legend>
@@ -22,11 +22,6 @@
                 <li><iframe width="135" height="94" src="https://www.youtube.com/embed/d5B_tOiLRq0?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe><span class="close"></span></li>
                 <li><iframe width="135" height="94" src="https://www.youtube.com/embed/d5B_tOiLRq0?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe><span class="close"></span></li>
             </ul>
-            <ul class="uploaded-docs">
-                <li class="docx"><a href="#">Building.docx</a><span class="close-doc"></span></li>
-                <li class="xslx"><a href="#">Building.xslx</a><span class="close-doc"></span></li>
-                <li class="pdf"><a href="#">Building.pdf</a><span class="close-doc"></span></li>
-            </ul>
             <div class="add-url">
                 <label for="video">Youtube Url</label>
                 <input type="url" name="video" id="video" />
@@ -38,18 +33,15 @@
                     <label for="image"></label>
                     <input type="file" id="image" name="image" multiple />
                 </li>
-                <li class="addmedia video">                                 </li>
-                <li class="addmedia document">
-                    <label for="document"></label>
-                    <span class="type-doc">.pdf, .doc(x), .xls(x) </span>
-                    <input type="file" name="document" id="document" multiple />
+                <li class="addmedia video">
+
                 </li>
             </ul>
         </fieldset>
         <fieldset class="discription">
             <ul>
-                <li><label for="dream-title">Назва<span>*</span></label><input class="dream-title" type="text" id="dream-title" name="dream-title" required /></li>
-                <li><label for="discription">Опис<span>*</span></label><textarea id="discription" name="discription" required></textarea></li>
+                <li><label for="dream-title">Назва<span>*</span></label><input class="dream-title" type="text" id="dream-title" name="dream-title" value="{{dream.title}}" required /></li>
+                <li><label for="discription">Опис<span>*</span></label><textarea id="discription" name="discription"value="{{dream.description}}" required></textarea></li>
                 <li class="wrapp-key-words">
                     <label class="f-left" for="key-words">Ключові слова</label>
                     <small>Відокремлювати комою</small>
@@ -79,11 +71,6 @@
                             <li class="inputs">
                                 <input class="f-left left-col w-item" type="text" name="item-of-costs" id="item-of-costs" />
                                 <input class="right-col w-amount" type="text" name="amount-of-costs" id="amount-of-costs" />
-                                <span class="close-input"></span>
-                            </li>
-                            <li class="inputs">
-                                <input class="f-left left-col w-item" type="text" name="item-of-costs"/>
-                                <input class="right-col w-amount" type="text" name="amount-of-costs"/>
                                 <span class="close-input"></span>
                             </li>
                             <li class="clear plus add-article"><button type="button"></button></li>
