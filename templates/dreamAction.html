@@ -11,16 +11,14 @@
                 <input id="main-image" type="file" name="main-image" />
             </div>
             <ul class="uploaded-images">
-                <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
-                <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
-                <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
-                <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
-                <li><img src="images/add-img.jpg" alt="" /><span class="close"></span></li>
+                <li ng-repeat="photo in dream.photos">
+                    <img ng-src="{{photo}}" alt="" /><span class="close"></span>
+                </li>
             </ul>
             <ul class="uploaded-videos">
-                <li><iframe width="135" height="94" src="https://www.youtube.com/embed/d5B_tOiLRq0?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe><span class="close"></span></li>
-                <li><iframe width="135" height="94" src="https://www.youtube.com/embed/d5B_tOiLRq0?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe><span class="close"></span></li>
-                <li><iframe width="135" height="94" src="https://www.youtube.com/embed/d5B_tOiLRq0?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe><span class="close"></span></li>
+                <li>
+                    <iframe width="135" height="94" src="https://www.youtube.com/embed/d5B_tOiLRq0?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe><span class="close"></span>
+                </li>
             </ul>
             <div class="add-url">
                 <label for="video">Youtube Url</label>
@@ -41,7 +39,7 @@
         <fieldset class="discription">
             <ul>
                 <li><label for="dream-title">Назва<span>*</span></label><input class="dream-title" type="text" id="dream-title" name="dream-title" value="{{dream.title}}" required /></li>
-                <li><label for="discription">Опис<span>*</span></label><textarea id="discription" name="discription"value="{{dream.description}}" required></textarea></li>
+                <li><label for="discription">Опис<span>*</span></label><textarea id="discription" name="discription" required>{{dream.description}}</textarea></li>
                 <li class="wrapp-key-words">
                     <label class="f-left" for="key-words">Ключові слова</label>
                     <small>Відокремлювати комою</small>

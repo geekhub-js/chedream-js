@@ -3,7 +3,7 @@ angular.module('editDream.controller', [
 ])
     .controller('EditDreamCtrl', function($scope, editDream, $rootScope) {
 
+        $rootScope.title = 'Редагування мрії';
         $scope.currentDream = editDream.getDream;
-        $rootScope.title = editDream.slug;
 
     });

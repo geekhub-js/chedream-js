@@ -1,8 +1,14 @@
 angular.module('addDream.model', [
     'cheDream.api'
 ])
-    .factory('addDream', function (api, $stateParams) {
+    .factory('addDream', function () {
 
-        
+        var dream = {};
+
+        return {
+            getDream: function () {
+                return dream;
+            }
+        };
 
     });

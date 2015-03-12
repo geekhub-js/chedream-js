@@ -10,7 +10,7 @@ angular.module('dream.model', [
         });
 
         return {
-            getDream: function () {console.log(dream);
+            getDream: function () {
                 return dream;
             }
         };
