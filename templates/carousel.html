@@ -14,10 +14,12 @@
             <li class="active"
                 ng-repeat="dream in doneDreams">
 
-                <img ng-src="{{dream.url}}" alt="Carousel Picture" style="width: 499px; height: 319px" />
-                <p class="dream-info">
-                    {{dream.completed_description}}
-                </p>
+                <a ui-sref="dream({ slug: dream.slug })">
+                    <img ng-src="{{dream.url}}" alt="Carousel Picture" style="width: 499px; height: 319px" />
+                    <p class="dream-info">
+                        {{dream.completed_description}}
+                    </p>
+                </a>
             </li>
         </ul>
     </div>
