@@ -17,7 +17,7 @@
                 ng-show="doneDreams[chosen].slug === dream.slug">
 
                 <a ui-sref="dream({ slug: dream.slug })">
-                    <img src="images/carosel-item2.jpg" alt="Carousel Picture"><!--ng-src="{{dream.url}}" -->
+                    <img ng-src="{{dream.url}}" alt="Carousel Picture" style="width: 499px; height: 319px" />
                 </a>
                 <p class="dream-info">
                     {{dream.completed_description}}
