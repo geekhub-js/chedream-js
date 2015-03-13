@@ -1,7 +1,7 @@
 <div class="carosel" id="carousel" dw-loading="carousel" dw-loading-options="{text: 'Loading dreams...'}">
     <ul class="carosel-nav">
         <li ng-repeat="dream in doneDreams"
-        ng-click="changeChosen($index);"
+        ng-click="changeChosen($index, dream.slug);"
         ng-class="doneDreams[chosen].slug === dream.slug ? 'active' : ''">
 
             <h2>

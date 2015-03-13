@@ -34,11 +34,13 @@ chedreamApp.directive('uiCarousel', function() {
                 }
             ];
 
-            $scope.changeChosen = function(index) {
-                $scope.chosen = index;
+            $scope.changeChosen = function(index, currentSlug) {
+                if ($scope.chosen == index) {
+                    $state.go( 'dream', { slug: currentSlug } );
+                } else {
+                    $scope.chosen = index;
+                }
             };
-
-            //dream({ slug: dream.slug })
 
         },
         templateUrl: 'templates/carousel.html'
