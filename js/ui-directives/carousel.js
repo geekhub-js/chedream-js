@@ -2,7 +2,7 @@ chedreamApp.directive('uiCarousel', function() {
     return {
         restrict: 'E',
         scope: {},
-        controller: function($scope, api, $interval) {
+        controller: function($scope, api, $state) {
             api('/dreams?limit=4&status=compleated&sort_by=status_update&sort_order=DESC', 'carousel').then(function (data) {
                 $scope.doneDreams = data.items;
             });
@@ -38,22 +38,7 @@ chedreamApp.directive('uiCarousel', function() {
                 $scope.chosen = index;
             };
 
-            var stop; //variable for interval function
-            $scope.sliding = function() {
-                stop = $interval(function() {
-                    $scope.chosen++;
-                    if ($scope.chosen > 3) {
-                        $scope.chosen = 0;
-                    }
-                }, 2000);//TODO 5000
-            };
-            $scope.resetSliding = function() {
-                $interval.cancel(stop);
-                $scope.sliding();
-            };
-            angular.element( document.querySelector( '#carousel' ) ).on('$destroy', function() {
-                $interval.cancel(stop);
-            });
+            //dream({ slug: dream.slug })
 
         },
         templateUrl: 'templates/carousel.html'

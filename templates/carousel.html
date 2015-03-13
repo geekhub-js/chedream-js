@@ -10,13 +10,11 @@
         </li>
     </ul>
     <div class="carosel-inner">
-        <ul class="carosel-wrapper" rn-carousel rn-carousel-auto-slide="3" rn-carousel-index="chosen">
+        <ul class="carosel-wrapper" rn-carousel rn-carousel-auto-slide="5" rn-carousel-index="chosen">
             <li class="active"
                 ng-repeat="dream in doneDreams">
 
-                <a ui-sref="dream({ slug: dream.slug })">
-                    <img ng-src="{{dream.url}}" alt="Carousel Picture" style="width: 499px; height: 319px" />
-                </a>
+                <img ng-src="{{dream.url}}" alt="Carousel Picture" style="width: 499px; height: 319px" />
                 <p class="dream-info">
                     {{dream.completed_description}}
                 </p>
