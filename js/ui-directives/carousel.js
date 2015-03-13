@@ -34,8 +34,8 @@ chedreamApp.directive('uiCarousel', function() {
                 }
             ];
 
-            $scope.changeChosen = function(el) {
-                for ($scope.chosen = 0; $scope.doneDreams[$scope.chosen].slug !== el.slug; $scope.chosen++) {}
+            $scope.changeChosen = function(index) {
+                $scope.chosen = index;
             };
 
             var stop; //variable for interval function

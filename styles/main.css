@@ -631,13 +631,14 @@ ul.main-menu li:last-child {
     margin: 0 auto;
     overflow: hidden;
 }
-.carosel-inner .carosel-wrapper {
-    position: relative;
-    width: 2000em;
+.carosel-wrapper {
+    overflow: visible !important;
 }
-.carosel-inner .active {
-    float: left;
-    position: relative;
+.carosel-wrapper > li {
+    height: auto !important;
+}
+.carosel-wrapper > li > a {
+    display: block;
 }
 .carosel-inner .active .dream-info {
     position: absolute;
@@ -648,21 +649,6 @@ ul.main-menu li:last-child {
     font-size: 14px;
     color: #fff;
     background: rgba(0,0,0,.25);
-}
-.animate-carousel {
-    -webkit-transition: all linear 0.5s;
-    transition: all linear 0.5s;
-}
-.animate-carousel.ng-hide {
-    margin-left: 500px;
-}
-.animate-carousel.ng-hide-add,
-.animate-carousel.ng-hide-remove,
-.animate-carousel.ng-hide-remove.ng-hide-remove-active {
-    margin-left: 0;
-}
-.animate-carousel.ng-hide-add.ng-hide-add-active {
-    margin-left: -500px;
 }
 .main-content {
     text-align: center;
