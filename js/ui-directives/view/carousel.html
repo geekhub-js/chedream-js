@@ -1,5 +1,5 @@
 <div class="carosel" id="carousel" ng-init="chosen = 0; sliding()"  dw-loading="carousel" dw-loading-options="{text: 'Loading dreams...'}">
-    <ul class="carosel-nav">
+    <ul class="carosel-nav" ng-hide="about">
         <li ng-repeat="dream in doneDreams"
             ng-click="changeChosen(dream); resetSliding()"
             ng-class="doneDreams[chosen].slug === dream.slug ? 'active' : ''">
@@ -9,6 +9,7 @@
             </h2>
         </li>
     </ul>
+    <img src="images/about_banner.png" class="carosel-nav" ng-show="about" />
     <div class="carosel-inner">
         <ul class="carosel-wrapper">
             <li class="animate-carousel active"
