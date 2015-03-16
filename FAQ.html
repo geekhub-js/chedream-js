@@ -4,19 +4,22 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<title>Index</title>
-	<link rel="stylesheet" href="styles/main.css">
-	<link rel="stylesheet" href="styles/FAQ.css">
+    <link rel="stylesheet" href="styles/jquery.mobile-menu.css" />
+	<link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 <div class="wrapper">
-	<header>
-        <p><a class="logo" href="index.html"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a></p>
+    <header>
+        <span class="mm-toggle ico-menu-1"></span>
+        <h1>
+            <a class="logo" href="index.html"><img src="images/logo.png" alt="Черкаська мрія">Черкаська мрія</a>
+        </h1>
         <nav>
-        <ul class="main-menu">
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-        </ul>
+            <ul class="main-menu">
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
         </nav>
         <div class="search">
             <form action="#" method="post">
@@ -41,31 +44,90 @@
         </ul>
         <span class="social-title">Увійти через</span>
         <ul class="account-bar">
-            <li>
+            <li class="user-avatar">
                 <a class="user-photo" href="#"><img src="images/user-photo.jpg" alt="User photo"></a>
             </li>
             <li>
-                <a class="profile" href="#">profile</a>
+                <a class="profile" href="#">Ваш профіль</a>
             </li>
             <li>
-                <a class="user-msg" href="#">messages</a>
+                <a class="user-msg" href="#">Повідомлення</a>
             </li>
             <li class="show-dreams">
-                <a class="user-dreams" href="#">user dreams</a>
+                <a class="user-dreams" href="#">Ваші мрії</a>
                 <ul class="user-dreams-list empty-list">
                     <li class="dream-item"><a href="#">Мрія 1</a></li>
                     <li class="dream-item"><a href="#">Мрія 2</a></li>
                     <li class="dream-item"><a href="#">Мрія 3</a></li>
                     <li class="close-block"><a href="#" class="close"><span class="ico-cancel"></span></a></li>
-                    <li class="no-user-dreams"><p>Ви не додали жодної мрії</p></li>
                 </ul>
             </li>
             <li>
-                <a class="logout" href="#">logout</a>
+                <a class="logout" href="#">Вихід</a>
             </li>
         </ul>
         <a class="add-dream" href="#">Додати мрію</a>
     </header>
+    <div id="mobile-menu">
+        <div class="mobile-search">
+            <form action="#" method="post">
+                <input type="submit" value="">
+                <input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
+            </form>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <form action="#" method="post">
+                <input type="submit" value="">
+                <input type="text" name="search_text" class="search-field" placeholder="Geekstarte">
+            </form>
+            <a class="search-link" href="#">Пошук</a>
+        </div>
+        <span class="mobile-social-title">Увійти через</span>
+        <ul class="social">
+            <li>
+                <a href="#"><span class="ico-fb"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-vk"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-gplus"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-tw"></span></a>
+            </li>
+        </ul>
+        <span class="user-panel-title">Панель користувача</span>
+        <ul class="account-bar mobile-menu">
+            <li class="user-avatar">
+                <a class="user-photo" href="#"><img src="images/user-photo.jpg" alt="User photo"></a>
+            </li>
+            <li>
+                <a class="profile" href="#">Ваш профіль</a>
+            </li>
+            <li>
+                <a class="user-msg" href="#">Повідомлення</a>
+            </li>
+            <li class="show-dreams">
+                <a class="user-dreams" href="#">Ваші мрії</a>
+                <ul class="user-dreams-list empty-list">
+                    <li class="dream-item"><a href="#">Мрія 1</a></li>
+                    <li class="dream-item"><a href="#">Мрія 2</a></li>
+                    <li class="dream-item"><a href="#">Мрія 3</a></li>
+                    <li class="no-user-dreams">Ви не додали жодної мрії</li>
+                </ul>
+            </li>
+            <li>
+                <a class="logout" href="#">Вихід</a>
+            </li>
+        </ul>
+    </div>
 	
     <div class="bg-pages faq-page">
         <h1 class="faq-page-title">Регламент та поради</h1>
@@ -139,5 +201,21 @@
         </ul>
     </footer>
 </div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-menu.min.js"></script>
+<script>
+    jQuery(document).ready(function($){
+        $("#mobile-menu").mobileMenu({
+            MenuWidth: 275,
+            SlideSpeed : 300,
+            WindowsMaxWidth : 959,
+            PagePush : false,
+            FromLeft : true,
+            Overlay : true,
+            CollapseMenu : true,
+            ClassName : "mobile-menu"
+        });
+    });
+</script>
 </body>
 </html>

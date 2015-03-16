@@ -322,13 +322,15 @@ a:hover {
   margin: 0 auto;
 }
 
-.bg-pages {
+.wrapper .bg-pages {
   overflow: hidden;
   position: relative;
   padding: 0 30px;
   background: #fff;
 }
-
+.wrapper .dream-page {
+  padding: 0;
+}
 /*-------------------------------------HEADER---------------------------------------*/
 header {
   position: relative;
