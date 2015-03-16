@@ -6,4 +6,5 @@ var chedreamApp = angular.module('cheDream.app', [
 ])
     .config(function ($urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
-    });
+    })
+    ;

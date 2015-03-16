@@ -1,7 +1,7 @@
 chedreamApp.directive('uiHeader', function() {
     return {
         restrict: 'E',
-        controller: function() {
+        controller: function($scope) {
             angular.element( document.querySelector( '#search-block' ) ).on('click', function() {
                 angular.element( document.querySelector( '#social-title-area' )).css('display', 'none');
                 document.querySelector( '#search-block' ).className = 'searching';
@@ -12,6 +12,6 @@ chedreamApp.directive('uiHeader', function() {
                 document.querySelector( '#search-block' ).className = '';
             });
         },
-        templateUrl: 'templates/header.html'
+        templateUrl: 'js/ui-directives/view/header.html'
     };
 });

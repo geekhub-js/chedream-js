@@ -2,10 +2,7 @@ angular.module('routing', [
     'home.controller',
     'faq.controller',
     'contacts.controller',
-    //'addDream.controller',
-    //'editDream.controller',
-    //'editProfile.controller',
-    //'userProfile.controller',
+    'profile.controller',
     'ui.router'
 ])
     .config(function ($stateProvider) {
@@ -24,6 +21,11 @@ angular.module('routing', [
                 url: '/contacts',
                 templateUrl: 'js/contacts/view/contacts.html',
                 controller: 'ContactsCtrl'
+            })
+            .state('profile', {
+                url: '/profile',
+                templateUrl: 'js/profile/view/profile.html',
+                controller: 'ProfileCtrl'
             })
         ;
     });
