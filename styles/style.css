@@ -3029,8 +3029,12 @@ select {
     clear: both;
   }
 
+<<<<<<< HEAD
 /*
   h1 {
+=======
+ .logo {
+>>>>>>> cbe5bba52d915a860d9bd6ab710cef829b16eb06
     width: 88px;
     margin: 0 auto;
   }
