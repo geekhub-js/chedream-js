@@ -3029,7 +3029,7 @@ select {
     clear: both;
   }
 
-  h1 {
+ .logo {
     width: 88px;
     margin: 0 auto;
   }
