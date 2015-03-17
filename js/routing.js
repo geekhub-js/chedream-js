@@ -26,7 +26,7 @@ angular.module('routing', [
             })
             .state('dream', {
                 url: '/dream/{slug}',
-                templateUrl: 'templates/dream.html',
+                templateUrl: 'js/dream/view/dream.html',
                 controller: 'DreamCtrl'
             })
             .state('editDream', {

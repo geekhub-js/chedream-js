@@ -43,6 +43,6 @@ chedreamApp.directive('uiCarousel', function() {
             };
 
         },
-        templateUrl: 'templates/carousel.html'
+        templateUrl: 'js/ui-directives/view/carousel.html'
     };
 });

@@ -12,6 +12,6 @@ chedreamApp.directive('uiHeader', function() {
                 document.querySelector( '#search-block' ).className = '';
             });
         },
-        templateUrl: 'templates/header.html'
+        templateUrl: 'js/ui-directives/view/header.html'
     };
 });
