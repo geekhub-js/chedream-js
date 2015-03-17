@@ -3029,17 +3029,6 @@ select {
     clear: both;
   }
 
-<<<<<<< HEAD
-/*
-  h1 {
-=======
- .logo {
->>>>>>> cbe5bba52d915a860d9bd6ab710cef829b16eb06
-    width: 88px;
-    margin: 0 auto;
-  }
-*/
-
   a {
     -webkit-tap-highlight-color: transparent;
   }
@@ -3062,8 +3051,11 @@ select {
   }
 
   header .logo {
-    margin: 14px 0 0 0;
-  }
+    float: none;
+    display: block;
+    width: 88px;
+    margin: 14px auto 0;
+}
 
   /*-------------------------Mobile-nav----------------------------------*/
   header .mm-toggle {
@@ -3090,11 +3082,10 @@ select {
   }
 
   header .add-dream {
-    position: relative;
     top: 0;
     right: 0;
-    left: 0;
-    float: right;
+    left: auto;
+    float: none;
     height: 60px;
     padding: 0;
     background: url(../images/ico_add.png) no-repeat right 9px;
@@ -3104,12 +3095,13 @@ select {
 
   header .add-dream:before {
     content: '';
-    position: absolute;
     top: 0;
-    left: 50%;
+    right: 0;
+    left: auto;
     z-index: -1;
     height: 35px;
     width: 100px;
+    float: none;
     margin-left: -40px;
     background: url(../images/bg_add_dream.png) no-repeat;
   }
