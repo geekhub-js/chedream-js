@@ -3029,10 +3029,12 @@ select {
     clear: both;
   }
 
+/*
   h1 {
     width: 88px;
     margin: 0 auto;
   }
+*/
 
   a {
     -webkit-tap-highlight-color: transparent;

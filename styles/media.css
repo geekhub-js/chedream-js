@@ -1,0 +1,51 @@
+@media screen and (max-width: 959px) {
+    .wrapper{
+        overflow: hidden;
+        width: 100%;
+        padding: 0;
+    }
+    .wrapper .bg-pages{
+        width: 100%;
+        margin: 60px 0 0 0;
+        padding: 0 10px;
+    }
+    .g-aside{
+        width: 30%;
+        margin: 0 2% 20px 0;
+    }
+    .faq-content{
+        width: 68%;
+    }
+    
+    .faq-aside a {
+        padding: 0 5px 0 0;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 560px){
+    .g-aside{
+        float: none;
+        width: 100%;
+        margin: 0 0 0px 0;
+    }
+    .g-aside ul{
+        height: 50px;
+        margin: 20px 0 0 0;
+        border-radius: 5px;
+        background: -webkit-linear-gradient(#ff6e5b 0%, #cb1605 100%);
+        background: -o-linear-gradient(#ff6e5b 0%, #cb1605 100%);
+        background: linear-gradient(#ff6e5b 0%, #cb1605 100%);
+        cursor: pointer;
+    }
+    .g-aside ul:after{
+        content: 'Вопросы';
+        display: inline-block;
+        margin: 16px 0 0 30px;
+    }
+    .g-aside ul li{
+        display: none;
+    }
+    .faq-content{
+        width: 100%;
+    }
+}
