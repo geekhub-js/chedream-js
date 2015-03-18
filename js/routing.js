@@ -5,7 +5,7 @@ angular.module('routing', [
     'profile.controller',
     'ui.router'
 ])
-    .config(function ($stateProvider) {
+    .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
         $stateProvider
             .state('home', {
                 url: '/',
@@ -28,4 +28,5 @@ angular.module('routing', [
                 controller: 'ProfileCtrl'
             })
         ;
-    });
+        $locationProvider.html5Mode({enabled: true, requireBase: false});
+    }]);
