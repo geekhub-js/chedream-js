@@ -637,7 +637,7 @@ ul.main-menu li:last-child {
 .carosel-wrapper > li {
     height: auto !important;
 }
-.carosel-wrapper > li > a {
+.carosel-wrapper > li > div {
     display: block;
 }
 .carosel-inner .active .dream-info {
