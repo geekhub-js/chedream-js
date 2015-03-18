@@ -5,6 +5,7 @@ angular.module('routing', [
     'dream.controller',
     'editDream.controller',
     'addDream.controller',
+    'profile.controller',
     'ui.router'
 ])
     .config(function ($stateProvider) {
@@ -16,12 +17,12 @@ angular.module('routing', [
             })
             .state('faq', {
                 url: '/faq',
-                templateUrl: 'templates/faq.html',
+                templateUrl: 'js/faq/view/faq.html',
                 controller: 'FaqCtrl'
             })
             .state('contacts', {
                 url: '/contacts',
-                templateUrl: 'templates/contacts.html',
+                templateUrl: 'js/contacts/view/contacts.html',
                 controller: 'ContactsCtrl'
             })
             .state('dream', {
@@ -38,6 +39,11 @@ angular.module('routing', [
                 url: '/addDream',
                 templateUrl: 'templates/dreamAction.html',
                 controller: 'AddDreamCtrl'
+            })
+            .state('profile', {
+                url: '/profile',
+                templateUrl: 'js/profile/view/profile.html',
+                controller: 'ProfileCtrl'
             })
         ;
     });
