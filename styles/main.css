@@ -600,7 +600,7 @@ ul.main-menu li:last-child {
 .carosel-nav li:nth-last-child(-n+2) {
     border-bottom: 0;
 }
-.carosel-nav li:hover, .carosel-nav .active {
+.carosel-nav .active {
     background: -webkit-linear-gradient(left,  #f1592a 0%,#fcb040 100%);
     background: -ms-linear-gradient(left,  #f1592a 0%,#fcb040 100%);
     background: -moz-linear-gradient(left, #f1592a 0%, #fcb040 100%);
@@ -616,7 +616,10 @@ ul.main-menu li:last-child {
     width: 242px;
     right: -12px;
 }
-.carosel-nav li:hover a, .carosel-nav .active a {
+.carosel-nav li:hover a {
+    color: #17d9a5;
+}
+.carosel-nav li.active:hover a, .carosel-nav .active a {
     color: #fff;
 }
 .carosel-nav a {
