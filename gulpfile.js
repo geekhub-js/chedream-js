@@ -24,5 +24,5 @@ gulp.task('default', ['clean'], function () {
 });
 
 gulp.task('watch', function () {
-    var css = gulp.watch('web-src/less/*.less', ['less']);
+    var css = gulp.watch('styles/*.less', ['less']);
 });
