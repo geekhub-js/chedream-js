@@ -22,15 +22,21 @@ angular.module('home.model', [
 
         angular.element( window ).on('scroll', bindScroll);
         function bindScroll() {
+            var newDreams = {};
             if ((window.innerHeight + window.scrollY) >= document.querySelector('.wrapper').offsetHeight - 100) {
-                var newDreams = {};
                 api('/dreams.json?limit=' + (dreams.length + 4), 'New Dreams').then(function (data) {
-                    newDreams = data.dreams.splice(dreams.length, 4);
+                    newDreams = data.dreams;//.splice(dreams.length, 4)
+
+//                    console.log('test started');
+//                    console.log(newDreams);
+//                    console.log('test finished');
+
                 });
                 if (newDreams.length < 4) {
                     isMoreDreams = false;
                 }
-                dreams.concat(newDreams);
+//                dreams.concat(newDreams);
+
             }
         }
 

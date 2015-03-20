@@ -42,6 +42,19 @@ chedreamApp.directive('uiCarousel', function() {
                 }
             };
 
+            var firstPositionX = 0,
+                firstPositionY = 0;
+            angular.element( document.getElementById('carousel').querySelector('.carosel-wrapper') )
+                .on('mousedown', function(e) {
+                    firstPositionX = e.clientX;
+                    firstPositionY = e.clientY;
+                })
+                .on('mouseup', function(e) {
+                    if ( Math.sqrt( Math.pow(firstPositionX - e.clientX, 2) + Math.pow(firstPositionY - e.clientY, 2) ) < 30 ) {
+                        $state.go( 'dream', { slug: $scope.doneDreams[$scope.chosen].slug } );
+                    }
+                });
+
         },
         templateUrl: 'js/ui-directives/view/carousel.html'
     };
