@@ -23,19 +23,14 @@ angular.module('home.model', [
         angular.element( window ).on('scroll', bindScroll);
         function bindScroll() {
             if ((window.innerHeight + window.scrollY) >= document.querySelector('.wrapper').offsetHeight - 100) {
-//                var newDreams = {},
-//                    apiString = '/dreams.json?limit=' + (dreams.length + 4);
-//                api(apiString, 'newDreams').then(function (data) {
-//                    newDreams = data.dreams.splice(dreams.length, 4);
-//                });
+                var newDreams = {};
+                api('/dreams.json?limit=' + (dreams.length + 4), 'New Dreams').then(function (data) {
+                    newDreams = data.dreams.splice(dreams.length, 4);
+                });
                 if (newDreams.length < 4) {
                     isMoreDreams = false;
                 }
-//                dreams.concat(newDreams);
-
-//                console.log(newDreams.length);
-                console.log('test');
-//                console.log(dreams.length);
+                dreams.concat(newDreams);
             }
         }
 
