@@ -53,6 +53,9 @@ chedreamApp.directive('uiCarousel', function() {
                     if ( Math.sqrt( Math.pow(firstPositionX - e.clientX, 2) + Math.pow(firstPositionY - e.clientY, 2) ) < 30 ) {
                         $state.go( 'dream', { slug: $scope.doneDreams[$scope.chosen].slug } );
                     }
+                })
+                .on('dragstart', function(e) {
+                    e.preventDefault();
                 });
 
         },

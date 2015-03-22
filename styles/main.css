@@ -982,3 +982,7 @@ footer .social li span {
 .dw-loading.dw-loading-overlay {
     background-color: rgba(0, 0, 0, .5);
 }
+/*-----------------------------JS-STYLES-------------------------------*/
+.carosel-wrapper > li {
+    cursor: pointer;
+}
