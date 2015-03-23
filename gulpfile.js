@@ -1,10 +1,28 @@
-var gulp = require('gulp');
-var concatCss = require('gulp-concat-css');
-var minifyCSS = require('gulp-minify-css');
+var gulp = require('gulp'),
+    concatJs = require('gulp-concat'),
+    minifyJs = require('gulp-uglify'),
+    less = require('gulp-less'),
+    clean = require('gulp-clean');
 
-gulp.task('default', function () {
-    gulp.src(['bower_components/angular-loading/angular-loading.css', 'styles/*.css'])
-        .pipe(concatCss("style.css"))
-        .pipe(gulp.dest('css/'))
-        .pipe(minifyCSS({keepBreaks:true}));
+gulp.task('less', function() {
+    return gulp.src(['styles/*.less'])
+        .pipe(less({compress: true}))
+        .pipe(gulp.dest('css/'));
+});
+
+gulp.task('clean', function () {
+    return gulp.src(['css/*'])
+        .pipe(clean());
+});
+
+gulp.task('default', ['clean'], function () {
+    var tasks = ['less'];
+
+    tasks.forEach(function (val) {
+        gulp.start(val);
+    });
+});
+
+gulp.task('watch', function () {
+    var css = gulp.watch('styles/*.less', ['less']);
 });
