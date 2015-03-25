@@ -5,7 +5,7 @@ angular.module('home.model', [
          var isMoreDreams = true;
 
          var dreams = [];
-         api('/dreams.json?limit=8', 'dreams').then(function (data) {
+         api('/dreams.json?count=8', 'dreams').then(function (data) {
             dreams = data.dreams;
          });
 
@@ -24,7 +24,7 @@ angular.module('home.model', [
         function bindScroll() {
             var newDreams = {};
             if ((window.innerHeight + window.scrollY) >= document.querySelector('.wrapper').offsetHeight - 100) {
-                api('/dreams.json?limit=' + (dreams.length + 4), 'New Dreams').then(function (data) {
+                api('/dreams.json?count=' + (dreams.length + 4), 'New Dreams').then(function (data) {
                     newDreams = data.dreams;//.splice(dreams.length, 4)
 
 //                    console.log('test started');
