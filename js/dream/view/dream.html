@@ -1,70 +1,73 @@
 <div class="dream-page" ng-init="dream = currentDream()" dw-loading="dream" dw-loading-options="{text: 'Loading dream...'}">
     <a class="dream-logo" href="#">
-        <img ng-src="{{dream.logo}}" alt="{{dream.title}}" width="649" height="357" />
+        <img src="images/dream-logo.jpg" alt="{{dream.title}}" width="649" height="357" />
+<!--ng-src="{{dream.logo}}"-->
     </a>
-    <a class="dream-video" href="#">
-        <video ng-src="{{dream.video}}"></video>
-    </a>
+<!--<a class="dream-video" href="#">-->
+    <!--<video ng-src="{{dream.video}}"></video>-->
+<!--</a>-->
     <ul class="dream-img">
         <li ng-repeat="picture in dream.pictures">
             <a href="#">
-                <img ng-src="picture.src" alt="" width="155" height="89" />
+                <img src="images/dream-img.jpg" alt="" width="155" height="89" />
+<!--ng-src="{{picture}}"-->
             </a>
         </li>
     </ul>
     <aside>
-        <img class="dream-author-ava" ng-src="{{dream.authorAvatar}}" alt="" width="66" height="66" />
+        <img class="dream-author-ava" src="images/dream-author-ava.jpg" alt="" width="66" height="66" />
+<!--ng-src="{{dream.authorAvatar}}"-->
         <p class="dream-author-name">
-            <a href="#">{{dream.author}}</a>
+            <a href="#">{{dream.author.first_name}} {{dream.author.last_name}}</a>
         </p>
         <a class="fund-raising" href="#">Розпочати збір коштів</a>
         <h2>Підтримати</h2>
         <ul class="dream-support">
-            <li ng-show="dream.dream_financial_resources.length > 1">
+            <li ng-show="dream.dream_financial_resources.length > 0">
                 <span class="circle finance"></span><a href="#">Фінансово</a>
             </li>
-            <li ng-show="dream.dream_equipment_resources.length > 1">
+            <li ng-show="dream.dream_equipment_resources.length > 0">
                 <span class="circle tools"></span><a href="#">Обладнанням / Технікою</a>
             </li>
-            <li ng-show="dream.dream_work_resources.length > 1">
+            <li ng-show="dream.dream_work_resources.length > 0">
                 <span class="circle work"></span><a href="#">Провести роботи</a>
             </li>
         </ul>
-        <p class="dream-support-text">Підтримало<span class="dream-support-number">541</span></p>
+        <p class="dream-support-text">Підтримало<span class="dream-support-number">{{dream.users_who_favorites.length}}</span></p>
         <div class="work-progress">
-            <div class="finance"
-                 data-pct="{{100 * dream.dream_financial_contributions / dream.dream_financial_resources}}"
-                 ng-show="dream.dream_financial_resources == {}">
-                <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                            stroke-dashoffset="0"></circle>
-                    <circle class="bar" r="25" cx="30" cy="30" fill="transparent"
-                            stroke-dasharray="{{157.079633 * dream.dream_financial_contributions / dream.dream_financial_resources}}"
-                            stroke-dashoffset="0"></circle>
-                </svg>
-            </div>
-            <div class="instruments"
-                 data-pct="{{100 * dream.dream_equipment_contributions / dream.dream_equipment_resources}}"
-                 ng-show="dream.dream_equipment_resources == {}">
-                <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                            stroke-dashoffset="0"></circle>
-                    <circle class="bar" r="25" cx="30" cy="30" fill="transparent"
-                            stroke-dasharray="{{157.079633 * dream.dream_equipment_contributions / dream.dream_equipment_resources}}"
-                            stroke-dashoffset="0"></circle>
-                </svg>
-            </div>
-            <div class="people"
-                 data-pct="{{100 * dream.dream_work_contributions / dream.dream_work_resources}}"
-                 ng-show="dream.dream_work_resources == {}">
-                <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
-                            stroke-dashoffset="0"></circle>
-                    <circle class="bar" r="25" cx="30" cy="30" fill="transparent"
-                            stroke-dasharray="{{157.079633 * dream.dream_work_contributions / dream.dream_work_resources}}"
-                            stroke-dashoffset="0"></circle>
-                </svg>
-            </div>
+            <!--<div class="finance"-->
+                 <!--data-pct="{{dream.financialPercent}}"-->
+                 <!--ng-show="dream.dream_financial_resources.length > 0">-->
+                <!--<svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"-->
+                            <!--stroke-dashoffset="0"></circle>-->
+                    <!--<circle class="bar" r="25" cx="30" cy="30" fill="transparent"-->
+                            <!--stroke-dasharray="{{1.57079633 * dream.financialPercent}}"-->
+                            <!--stroke-dashoffset="0"></circle>-->
+                <!--</svg>-->
+            <!--</div>-->
+            <!--<div class="instruments"-->
+                 <!--data-pct="{{dream.equipmentPercent}}"-->
+                 <!--ng-show="dream.dream_equipment_resources.length > 0">-->
+                <!--<svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"-->
+                            <!--stroke-dashoffset="0"></circle>-->
+                    <!--<circle class="bar" r="25" cx="30" cy="30" fill="transparent"-->
+                            <!--stroke-dasharray="{{1.57079633 * dream.equipmentPercent}}"-->
+                            <!--stroke-dashoffset="0"></circle>-->
+                <!--</svg>-->
+            <!--</div>-->
+            <!--<div class="people"-->
+                 <!--data-pct="{{dream.workPercent}}"-->
+                 <!--ng-show="dream.dream_work_resources.length > 0">-->
+                <!--<svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">-->
+                    <!--<circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"-->
+                            <!--stroke-dashoffset="0"></circle>-->
+                    <!--<circle class="bar" r="25" cx="30" cy="30" fill="transparent"-->
+                            <!--stroke-dasharray="{{1.57079633 * dream.workPercent}}"-->
+                            <!--stroke-dashoffset="0"></circle>-->
+                <!--</svg>-->
+            <!--</div>-->
         </div>
         <h2>Кошторис проекту</h2>
         <ul class="dream-estimate">
@@ -109,7 +112,7 @@
             <h1>{{dream.title}}</h1>
             <a class="dream-edit" ui-sref="editDream({ slug: dream.slug })">Редагувати</a>
             <div class="fund-raising-massage">
-                <p>Розпочато збір коштів для реалізації мрії "Супермрія".</p>
+                <p>Розпочато збір коштів для реалізації мрії "{{dream.title}}".</p>
                 <p><strong>Увага! Щоб уберегти Ваші кошти від зловмисників, здійснюйте переказ виключно за вказаними реквізитами.</strong></p>
                 <p>ЧФ ПрАТ КБ "ПРИВАТБАНК" Р/р 123456789</p>
             </div>
