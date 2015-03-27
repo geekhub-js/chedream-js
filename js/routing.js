@@ -12,7 +12,7 @@ angular.module('routing', [
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'templates/home.html',
+                templateUrl: 'js/home/view/home.html',
                 controller: 'HomeCtrl'
             })
             .state('faq', {
