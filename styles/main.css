@@ -616,9 +616,6 @@ ul.main-menu li:last-child {
     width: 242px;
     right: -12px;
 }
-.carosel-nav li:hover a {
-    color: #17d9a5;
-}
 .carosel-nav li.active:hover a, .carosel-nav .active a {
     color: #fff;
 }
@@ -632,15 +629,6 @@ ul.main-menu li:last-child {
     height: 318px;
     margin: 0 auto;
     overflow: hidden;
-}
-.carosel-wrapper {
-    overflow: visible !important;
-}
-.carosel-wrapper > li {
-    height: auto !important;
-}
-.carosel-wrapper > li > div {
-    display: block;
 }
 .carosel-inner .active .dream-info {
     position: absolute;
@@ -981,8 +969,4 @@ footer .social li span {
 }
 .dw-loading.dw-loading-overlay {
     background-color: rgba(0, 0, 0, .5);
-}
-/*-----------------------------JS-STYLES-------------------------------*/
-.carosel-wrapper > li {
-    cursor: pointer;
 }

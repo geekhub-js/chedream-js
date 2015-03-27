@@ -3,9 +3,9 @@ chedreamApp.directive('uiCarousel', function() {
         restrict: 'E',
         scope: {},
         controller: function($scope, api, $state) {
-            api('/dreams.json?count=4&page=1&sort_dy=createdAt&sort_order=DESC', 'carousel').then(function (data) {
-                $scope.doneDreams = data.items;
-            });
+//            api('/dreams.json?count=4&page=1&sort_dy=createdAt&sort_order=DESC', 'carousel').then(function (data) {
+//                $scope.doneDreams = data.items;
+//            });
 
             $scope.doneDreams = [//fake
                 {
