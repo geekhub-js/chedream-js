@@ -7,6 +7,43 @@ angular.module('home.model', [
          var dreams = [];
          api('/dreams.json?count=8', 'dreams').then(function (data) {
             dreams = data.dreams;
+
+            dreams.forEach(function(dr) {
+                var needWords = [
+                        'dream_financial_resources',
+                        'dream_equipment_resources',
+                        'dream_work_resources'
+                    ],
+                    haveWords = [
+                        'dream_financial_contributions',
+                        'dream_equipment_contributions',
+                        'dream_work_contributions'
+                    ],
+                    putWords = [
+                        'financialPercent',
+                        'equipmentPercent',
+                        'workPercent'
+                    ],
+                    need,
+                    have,
+                    i;
+                for (i = 0; i < putWords.length; i++) {
+                    need = 0;
+                    have = 0;
+                    dr[needWords[i]].forEach(function (el) {
+                        need += el.quantity;
+                    });
+                    dr[haveWords[i]].forEach(function (el) {
+                        have += el.quantity;
+                    });
+                    dr[putWords[i]] = Math.round( have / need * 100 );
+                    if (isNaN(dr[putWords[i]])) {
+                        dr[putWords[i]] = 0;
+                    }
+                }
+
+            });
+
          });
 
 //        angular.element( window ).on('scroll', bindScroll);

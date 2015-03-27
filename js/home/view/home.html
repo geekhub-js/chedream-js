@@ -31,35 +31,35 @@
                 </div>
                 <div class="work-progress">
                     <div class="finance"
-                         data-pct="{{100 * dream.dream_financial_contributions / dream.dream_financial_resources}}"
-                         ng-show="dream.dream_financial_resources == {}">
+                         data-pct="{{dream.financialPercent}}"
+                         ng-show="dream.dream_financial_resources.length > 0">
                         <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
                                     stroke-dashoffset="0"></circle>
                             <circle class="bar" r="25" cx="30" cy="30" fill="transparent"
-                                    stroke-dasharray="{{157.079633 * dream.dream_financial_contributions / dream.dream_financial_resources}}"
+                                    stroke-dasharray="{{1.57079633 * dream.financialPercent}}"
                                     stroke-dashoffset="0"></circle>
                         </svg>
                     </div>
                     <div class="instruments"
-                         data-pct="{{100 * dream.dream_equipment_contributions / dream.dream_equipment_resources}}"
-                         ng-show="dream.dream_equipment_resources == {}">
+                         data-pct="{{dream.equipmentPercent}}"
+                         ng-show="dream.dream_equipment_resources.length > 0">
                         <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
                                     stroke-dashoffset="0"></circle>
                             <circle class="bar" r="25" cx="30" cy="30" fill="transparent"
-                                    stroke-dasharray="{{157.079633 * dream.dream_equipment_contributions / dream.dream_equipment_resources}}"
+                                    stroke-dasharray="{{1.57079633 * dream.equipmentPercent}}"
                                     stroke-dashoffset="0"></circle>
                         </svg>
                     </div>
                     <div class="people"
-                         data-pct="{{100 * dream.dream_work_contributions / dream.dream_work_resources}}"
-                         ng-show="dream.dream_work_resources == {}">
+                         data-pct="{{dream.workPercent}}"
+                         ng-show="dream.dream_work_resources.length > 0">
                         <svg class="svg" width="60" height="60" version="1.1" xmlns="http://www.w3.org/2000/svg">
                             <circle r="25" cx="30" cy="30" fill="transparent" stroke-dasharray="157.079633"
                                     stroke-dashoffset="0"></circle>
                             <circle class="bar" r="25" cx="30" cy="30" fill="transparent"
-                                    stroke-dasharray="{{157.079633 * dream.dream_work_contributions / dream.dream_work_resources}}"
+                                    stroke-dasharray="{{1.57079633 * dream.workPercent}}"
                                     stroke-dashoffset="0"></circle>
                         </svg>
                     </div>
