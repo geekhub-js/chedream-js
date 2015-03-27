@@ -4,5 +4,5 @@ angular.module('home.controller', [
     .controller('HomeCtrl', function($scope, dreams, $rootScope) {
         $rootScope.title = 'Головна';
         $scope.dreams = dreams.getDreams;
-        $scope.isMore = dreams.getMoreDreams;
+        $scope.isMore = dreams.canGetMoreDreams;
     });

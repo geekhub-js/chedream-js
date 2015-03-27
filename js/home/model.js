@@ -7,7 +7,25 @@ angular.module('home.model', [
          var dreams = [];
          api('/dreams.json?count=8', 'dreams').then(function (data) {
             dreams = data.dreams;
+            progressOutput(dreams);
+         });
 
+        angular.element( window ).on('scroll', bindScroll);
+        function bindScroll() {
+            if ((window.innerHeight + window.scrollY) >= document.querySelector('.wrapper').offsetHeight - 100) {
+                api('/dreams.json?count=' + (dreams.length + 4), 'New Dreams').then(function (data) {
+                    dreams = dreams.concat(data.dreams.splice(dreams.length, 4));
+
+                    progressOutput(dreams);
+                    if (dreams.length % 4 !== 0) {
+                        isMoreDreams = false;
+                        angular.element( window ).off('scroll', bindScroll);
+                    }
+                });
+            }
+        }
+
+        function progressOutput(dreams) {
             dreams.forEach(function(dr) {
                 var needWords = [
                         'dream_financial_resources',
@@ -37,40 +55,21 @@ angular.module('home.model', [
                         have += el.quantity;
                     });
                     dr[putWords[i]] = Math.round( have / need * 100 );
+                    if (dr[putWords[i]] > 100) {
+                        dr[putWords[i]] = 100;
+                    }
                     if (isNaN(dr[putWords[i]])) {
                         dr[putWords[i]] = 0;
                     }
                 }
-
             });
-
-         });
-
-//        angular.element( window ).on('scroll', bindScroll);
-//        function bindScroll() {
-//            var newDreams = {};
-//            if ((window.innerHeight + window.scrollY) >= document.querySelector('.wrapper').offsetHeight - 100) {
-//                api('/dreams.json?count=' + (dreams.length + 4), 'New Dreams').then(function (data) {
-//                    newDreams = data.dreams;//.splice(dreams.length, 4)
-//
-////                    console.log('test started');
-////                    console.log(newDreams);
-////                    console.log('test finished');
-//
-//                });
-//                if (newDreams.length < 4) {
-//                    isMoreDreams = false;
-//                }
-////                dreams.concat(newDreams);
-//
-//            }
-//        }
+        }
 
         return {
             getDreams: function() {
                 return dreams;
             },
-            getMoreDreams: function() {
+            canGetMoreDreams: function() {
                 return isMoreDreams;
             }
         };
