@@ -11,19 +11,21 @@
 
                 <div class="dreams-preview-container">
                     <div class="owner">
-                        <img src="images/author.png" alt="Author avatar"><!-- ng-src="{{dream.avatar}}"-->
+                        <img src="images/author.png" alt="Author avatar">
+<!-- ng-src="{{dream.avatar}}"-->
 
-                        <p><a href="#">{{dream.author}}</a></p>
+                        <p><a href="#">{{dream.author.first_name}} {{dream.author.last_name}}</a></p>
                     </div>
                     <span class="triangle"></span>
                     <a ui-sref="dream({ slug: dream.slug })">
-                        <img class="img-thumbnail" src="images/img.png" alt="Dream preview image"><!-- ng-src="{{dream.picture}}"-->
+                        <img class="img-thumbnail" src="images/img.png" alt="Dream preview image">
+<!-- ng-src="{{dream.picture}}"-->
                     </a>
 
                     <div class="dreams-rank">
             <span class="supported">
-                <span>51</span><!-- {{dream.favorites_count}}-->
-                Підтримало<!-- {{dream.favorites_count_word}}"-->
+                <span>{{dream.users_who_favorites.length || ''}}</span>
+                {{dream.users_who_favorites.length > 1 ? 'Підтримало' : dream.users_who_favorites.length == 1 ? 'Підтримав' : ''}}
             </span>
                     </div>
                 </div>

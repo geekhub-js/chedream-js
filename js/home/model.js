@@ -9,17 +9,6 @@ angular.module('home.model', [
             dreams = data.dreams;
          });
 
-        dreams.forEach(function(el) {
-            if (el.favorites_count > 1) {
-                el.favorites_count_word = 'Підтримало';
-            } else if (el.favorites_count == 1) {
-                el.favorites_count_word = 'Підтримав';
-            } else {
-                el.favorites_count_word = '';
-                el.favorites_count = '';
-            }
-        });
-
 //        angular.element( window ).on('scroll', bindScroll);
 //        function bindScroll() {
 //            var newDreams = {};
