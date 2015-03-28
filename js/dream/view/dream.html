@@ -151,8 +151,7 @@
                 <p><strong>Увага! Щоб уберегти Ваші кошти від зловмисників, здійснюйте переказ виключно за вказаними реквізитами.</strong></p>
                 <p>ЧФ ПрАТ КБ "ПРИВАТБАНК" Р/р 123456789</p>
             </div>
-            <div class="description">
-                {{dream.description}}
+            <div class="description" ng-bind-html="deliberatelyTrustDangerousSnippet()">
             </div>
         </article>
         <h2>Учасники</h2>

@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "angular-loading": "~0.1.4",
-    "angular-carousel": "~0.3.9"
+    "angular-carousel": "~0.3.9",
+    "angular-sanitize": "~1.4.0"
   }
 }
