@@ -22,6 +22,7 @@
         </p>
         <a class="fund-raising" href="#">Розпочати збір коштів</a>
         <h2>Підтримати</h2>
+<!--link for helping-->
         <ul class="dream-support"
             ng-show="dream.dream_financial_resources.length > 0 ||
             dream.dream_equipment_resources.length > 0 ||
@@ -29,12 +30,15 @@
 
             <li ng-show="dream.dream_financial_resources.length > 0">
                 <span class="circle finance"></span><a href="#">Фінансово</a>
+<!--link for helping-->
             </li>
             <li ng-show="dream.dream_equipment_resources.length > 0">
                 <span class="circle tools"></span><a href="#">Обладнанням / Технікою</a>
+<!--link for helping-->
             </li>
             <li ng-show="dream.dream_work_resources.length > 0">
                 <span class="circle work"></span><a href="#">Провести роботи</a>
+<!--link for helping-->
             </li>
         </ul>
         <p class="dream-support-text" ng-show="dream.users_who_favorites.length > 1">{{dream.users_who_favorites.length > 1 ? 'Підтримало' : dream.users_who_favorites.length == 1 ? 'Підтримав' : ''}}
@@ -89,7 +93,8 @@
                         <p class="dream-item">{{resource.title}}</p>
                         <p class="item-number">
                             <span class="already-have">999</span>/{{resource.quantity}} грн.
-                            <span class="plus-add-help">+</span>
+                            <span class="plus-add-help">+
+<!--link for helping-->
                         </p>
                     </li>
                 </ul>
@@ -102,6 +107,7 @@
                         <p class="item-number">
                             <span class="already-have">999</span>/{{resource.quantity}} шт.
                             <span class="plus-add-help">+</span>
+<!--link for helping-->
                         </p>
                     </li>
                 </ul>
@@ -114,6 +120,7 @@
                         <p class="item-number">
                             <span class="already-have">999</span>/{{resource.quantity}} дн.
                             <span class="plus-add-help">+</span>
+<!--link for helping-->
                         </p>
                     </li>
                 </ul>
@@ -121,11 +128,19 @@
         </ul>
         <h2> Поділитись</h2>
         <ul class="contacts-panel">
-            <li><a href="#"><span class="ico-fb"></span></a>
-            </li><li><a href="#"><span class="ico-vk"></span></a>
-        </li><li><a href="#"><span class="ico-gplus"></span></a>
-        </li><li><a href="#"><span class="ico-tw"></span></a>
-        </li></ul>
+            <li>
+                <a href="#"><span class="ico-fb"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-vk"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-gplus"></span></a>
+            </li>
+            <li>
+                <a href="#"><span class="ico-tw"></span></a>
+            </li>
+        </ul>
     </aside>
     <section>
         <article>
