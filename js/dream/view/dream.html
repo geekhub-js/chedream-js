@@ -22,7 +22,11 @@
         </p>
         <a class="fund-raising" href="#">Розпочати збір коштів</a>
         <h2>Підтримати</h2>
-        <ul class="dream-support">
+        <ul class="dream-support"
+            ng-show="dream.dream_financial_resources.length > 0 ||
+            dream.dream_equipment_resources.length > 0 ||
+            dream.dream_work_resources.length > 0">
+
             <li ng-show="dream.dream_financial_resources.length > 0">
                 <span class="circle finance"></span><a href="#">Фінансово</a>
             </li>
@@ -33,8 +37,15 @@
                 <span class="circle work"></span><a href="#">Провести роботи</a>
             </li>
         </ul>
-        <p class="dream-support-text">Підтримало<span class="dream-support-number">{{dream.users_who_favorites.length}}</span></p>
-        <div class="work-progress">
+        <p class="dream-support-text" ng-show="dream.users_who_favorites.length > 1">{{dream.users_who_favorites.length > 1 ? 'Підтримало' : dream.users_who_favorites.length == 1 ? 'Підтримав' : ''}}
+            <span class="dream-support-number">
+                {{dream.users_who_favorites.length || ''}}
+            </span>
+        </p>
+        <div class="work-progress"
+            ng-show="dream.dream_financial_resources.length > 0 ||
+            dream.dream_equipment_resources.length > 0 ||
+            dream.dream_work_resources.length > 0">
             <!--<div class="finance"-->
                  <!--data-pct="{{dream.financialPercent}}"-->
                  <!--ng-show="dream.dream_financial_resources.length > 0">-->
@@ -71,30 +82,39 @@
         </div>
         <h2>Кошторис проекту</h2>
         <ul class="dream-estimate">
-            <li>
+            <li ng-show="dream.dream_financial_resources.length > 0">
                 <h3 class="finance">Фінансові витрати <span>грн.</span></h3>
                 <ul class="item-list">
-                    <li>
-                        <p class="dream-item">Вагон піску</p>
-                        <p class="item-number"><span class="already-have">999</span>/1000 грн.<span class="plus-add-help">+</span></p>
+                    <li ng-repeat="resource in dream.dream_financial_resources">
+                        <p class="dream-item">{{resource.title}}</p>
+                        <p class="item-number">
+                            <span class="already-have">999</span>/{{resource.quantity}} грн.
+                            <span class="plus-add-help">+</span>
+                        </p>
                     </li>
                 </ul>
             </li>
-            <li>
+            <li ng-show="dream.dream_equipment_resources.length > 0">
                 <h3 class="tools">Інструменти / обладнання <br /> техніка, <span>шт.</span></h3>
                 <ul class="item-list">
-                    <li>
-                        <p class="dream-item">Вагон піску</p>
-                        <p class="item-number"><span class="already-have">999</span>/1000 грн.<span class="plus-add-help">+</span></p>
+                    <li ng-repeat="resource in dream.dream_equipment_resources">
+                        <p class="dream-item">{{resource.title}}</p>
+                        <p class="item-number">
+                            <span class="already-have">999</span>/{{resource.quantity}} шт.
+                            <span class="plus-add-help">+</span>
+                        </p>
                     </li>
                 </ul>
             </li>
-            <li>
-                <h3 class="work">Роботи та ресурси, <span>грн.</span></h3>
+            <li ng-show="dream.dream_work_resources.length > 0">
+                <h3 class="work">Роботи та ресурси, <span>дн.</span></h3>
                 <ul class="item-list">
-                    <li>
-                        <p class="dream-item">Вагон піску</p>
-                        <p class="item-number"><span class="already-have">99 999 </span>/99 999 грн.<span class="plus-add-help">+</span></p>
+                    <li ng-repeat="resource in dream.dream_work_resources">
+                        <p class="dream-item">{{resource.title}}</p>
+                        <p class="item-number">
+                            <span class="already-have">999</span>/{{resource.quantity}} дн.
+                            <span class="plus-add-help">+</span>
+                        </p>
                     </li>
                 </ul>
             </li>
