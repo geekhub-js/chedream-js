@@ -758,7 +758,6 @@ ul.main-menu li:last-child {
     text-align: center;
 }
 .svg circle {
-    stroke-dashoffset: 0;
     transition: stroke-dashoffset 1s linear;
     stroke: #e0e0e0;
     stroke-width: 7px;
