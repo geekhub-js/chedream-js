@@ -5,7 +5,7 @@ angular.module('home.model', [
          var isMoreDreams = true;
 
          var dreams = [];
-         api('/dreams.json?count=8', 'dreams').then(function (data) {
+         api('get', '/dreams.json?count=8', 'dreams').then(function (data) {
             dreams = data.dreams;
             dreams.forEach(function(dream) {
                 dream = progressOutput(dream);
@@ -15,7 +15,7 @@ angular.module('home.model', [
         angular.element( window ).on('scroll', bindScroll);
         function bindScroll() {
             if ((window.innerHeight + window.scrollY) >= document.querySelector('.wrapper').offsetHeight - 100) {
-                api('/dreams.json?count=' + (dreams.length + 4), 'New Dreams').then(function (data) {
+                api('get', '/dreams.json?count=' + (dreams.length + 4), 'New Dreams').then(function (data) {
                     dreams = dreams.concat(data.dreams.splice(dreams.length, 4));
 
                     dreams.forEach(function(dream) {

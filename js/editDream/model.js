@@ -5,7 +5,7 @@ angular.module('editDream.model', [
 
         var dream = {};
 
-        api('/dreams/' + $stateParams.slug + '.json', 'editDream').then(function (data) {
+        api('get', '/dreams/' + $stateParams.slug + '.json', 'editDream').then(function (data) {
             dream = data;
         });
 

@@ -5,7 +5,7 @@ angular.module('dream.model', [
 
         var dream = {};
 
-        api('/dreams/' + $stateParams.slug + '.json', 'dream').then(function (data) {
+        api('get', '/dreams/' + $stateParams.slug + '.json', 'dream').then(function (data) {
             dream = data;
             dream = progressOutput(dream);
         });
