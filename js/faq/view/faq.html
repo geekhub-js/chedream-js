@@ -22,7 +22,7 @@
             </dl>
             <dl class="faq-reply">
                 <dt>Відповідь:</dt>
-                <dd>{{ quest.answer }}</dd>
+                <dd ng-bind-html="deliberatelyTrustDangerousSnippet()"></dd>
             </dl>
         </section>
     </div>

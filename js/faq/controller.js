@@ -1,7 +1,9 @@
 angular.module('faq.controller', [
-    'faq.model'
+    'faq.model',
+    'ngSanitize'
 ])
-    .controller('FaqCtrl', function($scope, faq, $rootScope) {
+    .controller('FaqCtrl', function($scope, faq, $sce, $rootScope) {
+
         $rootScope.title = 'FAQ';
         $scope.questions = faq.getQuestions;
         $scope.question = faq.getQuestion;
@@ -10,4 +12,8 @@ angular.module('faq.controller', [
         $scope.changeChosenNumber = function(el) {
             $scope.current = faq.position(el);
         };
+        $scope.deliberatelyTrustDangerousSnippet = function() {
+            return $sce.trustAsHtml($scope.questions()[$scope.current].answer);
+        };
+
     });

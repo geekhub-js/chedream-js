@@ -5,7 +5,7 @@ angular.module('faq.model', [
         var questions = [];
 
         api('get', '/faqs.json', 'faqs').then(function (data) {
-            questions = data.faqs;
+            questions = data;
         });
 
         return {
